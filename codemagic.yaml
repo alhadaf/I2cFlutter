@@ -29,15 +29,15 @@ workflows:
           echo "Looking for pubspec.yaml:"
           find "$CM_CLONE_DIR" -maxdepth 4 -name pubspec.yaml -print || true
 
-       - name: Install Flutter dependencies
-         working_directory: $CM_CLONE_DIR/$APP_DIR
-         script: |
-           echo "Working directory: $(pwd)"
-           echo "Looking for pubspec.yaml..."
-           ls -la pubspec.yaml || echo "pubspec.yaml not found"
-           ls -la || echo "Directory listing failed"
-           test -f pubspec.yaml || { echo "❌ pubspec.yaml not found in $APP_DIR"; exit 1; }
-           flutter pub get
+      - name: Install Flutter dependencies
+        working_directory: $CM_CLONE_DIR/$APP_DIR
+        script: |
+          echo "Working directory: $(pwd)"
+          echo "Looking for pubspec.yaml..."
+          ls -la pubspec.yaml || echo "pubspec.yaml not found"
+          ls -la || echo "Directory listing failed"
+          test -f pubspec.yaml || { echo "❌ pubspec.yaml not found in $APP_DIR"; exit 1; }
+          flutter pub get
 
       - name: Fetch iOS signing files (App Store)
         script: |
