@@ -21,10 +21,10 @@ print_success() {
     echo -e "${GREEN}[SUCCESS]${NC} $1"
 }
 
-OLD_BUNDLE_ID="com.example.eventCheckinMobile"
-NEW_BUNDLE_ID="com.eventcheckin.mobile"
-OLD_TEST_BUNDLE_ID="com.example.eventCheckinMobile.RunnerTests"
-NEW_TEST_BUNDLE_ID="com.eventcheckin.mobile.RunnerTests"
+OLD_BUNDLE_ID="com.eventcheckin.mobile"
+NEW_BUNDLE_ID="com.i2c.joinmeister"
+OLD_TEST_BUNDLE_ID="com.eventcheckin.mobile.RunnerTests"
+NEW_TEST_BUNDLE_ID="com.i2c.joinmeister.RunnerTests"
 
 print_status "Updating bundle identifier from $OLD_BUNDLE_ID to $NEW_BUNDLE_ID"
 
