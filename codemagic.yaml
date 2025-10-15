@@ -4,14 +4,12 @@ workflows:
     max_build_duration: 120
     instance_type: mac_mini_m1
     environment:
+      groups:
+        - app_store_credentials  # Reference to environment variable group
       ios_signing:
         distribution_type: app_store
         bundle_identifier: com.joinmeister.silentprintbrowser
       vars:
-        APP_STORE_CONNECT_ISSUER_ID: 9b6f8519-694d-48a5-8b90-cd6c1debe0d3
-        APP_STORE_CONNECT_KEY_IDENTIFIER: 6Y8XL8Q783
-        # APP_STORE_CONNECT_PRIVATE_KEY and CERTIFICATE_PRIVATE_KEY 
-        # are configured in Codemagic UI Environment Variables
         XCODE_WORKSPACE: "Runner.xcworkspace"
         XCODE_SCHEME: "Runner"
       flutter: stable
