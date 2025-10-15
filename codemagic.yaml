@@ -4,49 +4,24 @@ workflows:
     max_build_duration: 120
     instance_type: mac_mini_m1
     environment:
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.joinmeister.silentprintbrowser
       vars:
         APP_STORE_CONNECT_ISSUER_ID: 9b6f8519-694d-48a5-8b90-cd6c1debe0d3
         APP_STORE_CONNECT_KEY_IDENTIFIER: 6Y8XL8Q783
         XCODE_WORKSPACE: "Runner.xcworkspace"
         XCODE_SCHEME: "Runner"
-        BUNDLE_IDENTIFIER: "com.joinmeister.silentprintbrowser"
       flutter: stable
       xcode: latest
       cocoapods: default
     
     scripts:
-      - name: Set up code signing and keychain
+      - name: Set up code signing
         script: |
-          echo "Setting up manual code signing..."
+          echo "Code signing will be handled automatically by Codemagic"
           echo "Current directory: $(pwd)"
           ls -la
-          
-          # Clean up any existing certificates and profiles
-          echo "Cleaning up existing certificates and profiles..."
-          rm -rf /Users/builder/Library/MobileDevice/Certificates/*
-          rm -rf /Users/builder/Library/MobileDevice/Provisioning\ Profiles/*
-          rm -rf /Users/builder/Library/codemagic-cli-tools/keychains/*
-          
-          # Initialize keychain
-          echo "Initializing keychain..."
-          keychain initialize
-          
-          # Fetch signing files manually
-          echo "Fetching signing files..."
-          app-store-connect fetch-signing-files $BUNDLE_IDENTIFIER \
-            --delete-stale-profiles \
-            --create \
-            --type IOS_APP_STORE \
-            --platform IOS \
-            --issuer-id $APP_STORE_CONNECT_ISSUER_ID \
-            --key-id $APP_STORE_CONNECT_KEY_IDENTIFIER \
-            --private-key $APP_STORE_CONNECT_PRIVATE_KEY
-          
-          # Add certificates to keychain
-          echo "Adding certificates to keychain..."
-          keychain add-certificates
-          
-          echo "Manual code signing setup complete"
           
       - name: Install Flutter dependencies
         script: |
