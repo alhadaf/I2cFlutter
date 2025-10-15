@@ -8,8 +8,6 @@ workflows:
         distribution_type: app_store
         bundle_identifier: com.joinmeister.silentprintbrowser
       vars:
-        APP_STORE_CONNECT_ISSUER_ID: 9b6f8519-694d-48a5-8b90-cd6c1debe0d3
-        APP_STORE_CONNECT_KEY_IDENTIFIER: 6Y8XL8Q783
         XCODE_WORKSPACE: "Runner.xcworkspace"
         XCODE_SCHEME: "Runner"
       flutter: stable
