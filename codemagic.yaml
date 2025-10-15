@@ -7,6 +7,8 @@ workflows:
       ios_signing:
         distribution_type: app_store
         bundle_identifier: com.joinmeister.silentprintbrowser
+        certificate_type: ios_distribution
+        provisioning_profile_type: ios_app_store
       vars:
         APP_STORE_CONNECT_ISSUER_ID: 9b6f8519-694d-48a5-8b90-cd6c1debe0d3
         APP_STORE_CONNECT_KEY_IDENTIFIER: 6Y8XL8Q783
@@ -19,9 +21,16 @@ workflows:
     scripts:
       - name: Set up code signing and keychain
         script: |
-          echo "Code signing files fetched successfully"
+          echo "Setting up code signing..."
           echo "Current directory: $(pwd)"
           ls -la
+          
+          # Clean up any existing certificates to force fresh creation
+          echo "Cleaning up existing certificates..."
+          rm -rf /Users/builder/Library/MobileDevice/Certificates/*
+          rm -rf /Users/builder/Library/MobileDevice/Provisioning\ Profiles/*
+          
+          echo "Code signing setup complete"
           
       - name: Install Flutter dependencies
         script: |
