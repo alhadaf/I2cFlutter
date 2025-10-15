@@ -1,0 +1,68 @@
+workflows:
+  ios-release:
+    name: iOS Release
+    max_build_duration: 120
+    instance_type: mac_mini_m1
+    environment:
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.joinmeister.silentprintbrowser
+      vars:
+        APP_STORE_CONNECT_ISSUER_ID: 9b6f8519-694d-48a5-8b90-cd6c1debe0d3
+        APP_STORE_CONNECT_KEY_IDENTIFIER: 6Y8XL8Q783
+        APP_STORE_CONNECT_PRIVATE_KEY: Encrypted(...)  # Add your encrypted key here
+        CERTIFICATE_PRIVATE_KEY: Encrypted(...)  # Add your encrypted key here
+        XCODE_WORKSPACE: "Runner.xcworkspace"
+        XCODE_SCHEME: "Runner"
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+    
+    scripts:
+      - name: Set up code signing and keychain
+        script: |
+          echo "Code signing files fetched successfully"
+          echo "Current directory: $(pwd)"
+          ls -la
+          
+      - name: Install Flutter dependencies
+        script: |
+          flutter packages pub get
+          
+      - name: Install CocoaPods dependencies
+        script: |
+          cd ios && pod install
+          
+      - name: Flutter build ipa and automatic versioning
+        script: |
+          flutter build ipa --release \
+            --build-name=1.0.$BUILD_NUMBER \
+            --build-number=$BUILD_NUMBER \
+            --export-options-plist=/Users/builder/export_options.plist
+            
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+      - flutter_drive.log
+      
+    publishing:
+      email:
+        recipients:
+          - your-email@example.com  # Replace with your email
+        notify:
+          success: true
+          failure: true
+      app_store_connect:
+        auth: integration
+        
+        # Configuration related to TestFlight (optional)
+        submit_to_testflight: true
+        beta_groups: # Specify the names of beta tester groups that will get access to the build once it has passed beta review.
+          - group name 1
+          - group name 2
+        
+        # Configuration related to App Store (optional)
+        submit_to_app_store: false
+
+
+
