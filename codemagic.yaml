@@ -1,63 +1,92 @@
 workflows:
-  ios-release:
-    name: iOS Release
-    max_build_duration: 120
-    instance_type: mac_mini_m1
+  ios_app_store:
+    name: iOS App Store
     environment:
-      ios_signing:
-        distribution_type: app_store
-        bundle_identifier: com.joinmeister.silentprintbrowser
-      vars:
-        APP_STORE_CONNECT_ISSUER_ID: 9b6f8519-694d-48a5-8b90-cd6c1debe0d3
-        APP_STORE_CONNECT_KEY_IDENTIFIER: 6Y8XL8Q783
-        XCODE_WORKSPACE: "Runner.xcworkspace"
-        XCODE_SCHEME: "Runner"
       flutter: stable
-      xcode: latest
-      cocoapods: default
-    
+      vars:
+        # === CHANGE THIS ===
+        APP_DIR: "."                       # e.g. ".", "apps/silentprintbrowser"
+        BUNDLE_ID: "com.joinmeister.silentprintbrowser"
+        ASC_ISSUER_ID: "9b6f8519-694d-48a5-8b90-cd6c1debe0d3"
+        ASC_KEY_ID: "6Y8XL8Q783"
+        TEAM_ID: "YOUR_TEAM_ID"            # (optional) your Apple dev team id
+      groups:
+        # Store these in Codemagic → Environment variables (secure):
+        # AUTH_KEY: App Store Connect API private key (contents)
+        # CERTIFICATE_KEY: Apple Distribution private key (PEM)
+        - apple_signing
+    cache:
+      cache_paths:
+        - ~/.pub-cache
+        - $HOME/Library/Caches/CocoaPods
+        - $HOME/Library/Developer/Xcode/DerivedData
     scripts:
-      - name: Set up build environment
+      - name: Diagnose repo layout
         script: |
-          echo "Build environment setup"
-          echo "Current directory: $(pwd)"
-          ls -la
-          echo "Code signing will be handled automatically by Codemagic"
-          
+          echo "CM_CLONE_DIR=$CM_CLONE_DIR"
+          echo "APP_DIR=$APP_DIR"
+          ls -la "$CM_CLONE_DIR" || true
+          echo "Looking for pubspec.yaml:"
+          find "$CM_CLONE_DIR" -maxdepth 4 -name pubspec.yaml -print || true
+
       - name: Install Flutter dependencies
+        working_directory: $CM_CLONE_DIR/$APP_DIR
         script: |
-          flutter packages pub get
-          echo "Flutter dependencies installed"
-          echo "Checking generated files..."
-          ls -la ios/Flutter/
-          
-      - name: Install CocoaPods dependencies
+          test -f pubspec.yaml || { echo "❌ pubspec.yaml not found in $APP_DIR"; exit 1; }
+          flutter pub get
+
+      - name: Fetch iOS signing files (App Store)
         script: |
-          echo "Checking Flutter generated files..."
-          ls -la ios/Flutter/
-          
-          echo "Installing CocoaPods dependencies..."
-          cd ios && pod install
-          
-      - name: Flutter build ipa and automatic versioning
+          app-store-connect fetch-signing-files "$BUNDLE_ID" \
+            --create --type IOS_APP_STORE --platform IOS \
+            --issuer-id "$ASC_ISSUER_ID" \
+            --key-id "$ASC_KEY_ID" \
+            --private-key @env:AUTH_KEY \
+            --certificate-key @env:CERTIFICATE_KEY \
+            --delete-stale-profiles
+
+      - name: Initialize keychain & import certs
         script: |
-          flutter build ipa --release \
-            --build-name=1.0.$BUILD_NUMBER \
-            --build-number=$BUILD_NUMBER \
-            --export-options-plist=/Users/builder/export_options.plist
-            
+          keychain initialize
+          keychain add-certificates
+
+      # If your iOS module uses pods:
+      - name: Install CocoaPods (if present)
+        working_directory: $CM_CLONE_DIR/$APP_DIR/ios
+        script: |
+          if [ -f "Podfile" ]; then
+            gem install cocoapods --no-document || true
+            pod repo update || true
+            pod install
+          else
+            echo "No Podfile; skipping pods"
+          fi
+
+      # Option A: Build with Flutter (simplest)
+      - name: Build IPA (Flutter)
+        working_directory: $CM_CLONE_DIR/$APP_DIR
+        script: |
+          # With signing assets installed, Flutter will sign during export
+          flutter build ipa --release
+
+      # --- Option B (alternative): Build with xcode-project CLI ---
+      # - name: Build IPA (Xcode)
+      #   script: |
+      #     xcode-project build-ipa \
+      #       --workspace "$CM_CLONE_DIR/$APP_DIR/ios/Runner.xcworkspace" \
+      #       --scheme "Runner" \
+      #       --archive-method app-store \
+      #       ${TEAM_ID:+--team-id "$TEAM_ID"}
+
     artifacts:
-      - build/ios/ipa/*.ipa
-      - /tmp/xcodebuild_logs/*.log
-      - flutter_drive.log
-      
+      - $CM_CLONE_DIR/$APP_DIR/build/ios/**/*.ipa
+      - $CM_CLONE_DIR/$APP_DIR/build/ios/**/*.dSYM
+      - $CM_CLONE_DIR/$APP_DIR/build/ios/archive/**/*.xcarchive
+
     publishing:
       email:
         recipients:
-          - your-email@example.com  # Replace with your email
+          - info@alimhanna.com
         notify:
           success: true
           failure: true
-
-
-
