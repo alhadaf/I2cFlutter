@@ -1,87 +1,83 @@
-workflows:
-  ios_app_store:
-    name: iOS App Store
-    environment:
-      flutter: stable
-      vars:
-        # === CHANGE THIS ===
-        APP_DIR: "."                        # Flutter project is in root directory
-        BUNDLE_ID: "com.joinmeister.silentprintbrowser"
-        ASC_ISSUER_ID: "9b6f8519-694d-48a5-8b90-cd6c1debe0d3"
-        ASC_KEY_ID: "6Y8XL8Q783"
-        TEAM_ID: "YOUR_TEAM_ID"            # (optional) your Apple dev team id
-      groups:
-        - apple_signing
-    cache:
-      cache_paths:
-        - ~/.pub-cache
-        - $HOME/Library/Caches/CocoaPods
-        - $HOME/Library/Developer/Xcode/DerivedData
-    scripts:
-      - name: Diagnose repo layout
-        script: |
-          echo "=== Repository Structure ==="
-          echo "CM_CLONE_DIR=$CM_CLONE_DIR"
-          echo "Root directory contents:"
-          ls -la "$CM_CLONE_DIR"
-          echo ""
-          echo "Checking for pubspec.yaml in root:"
-          test -f "$CM_CLONE_DIR/pubspec.yaml" && echo "✅ Found pubspec.yaml" || echo "❌ pubspec.yaml not found"
+name: event_checkin_mobile
+description: A Flutter mobile app for event check-in system
+publish_to: 'none'
+version: 1.0.0+1
 
-      - name: Install Flutter dependencies
-        script: |
-          cd "$CM_CLONE_DIR"
-          echo "Working directory: $(pwd)"
-          
-          if [ ! -f "pubspec.yaml" ]; then
-            echo "❌ pubspec.yaml not found"
-            ls -la
-            exit 1
-          fi
-          
-          echo "✅ Found pubspec.yaml"
-          flutter pub get
+environment:
+  sdk: '>=3.0.0 <4.0.0'
 
-      - name: Fetch iOS signing files (App Store)
-        script: |
-          app-store-connect fetch-signing-files "$BUNDLE_ID" \
-            --create --type IOS_APP_STORE --platform IOS \
-            --issuer-id "$ASC_ISSUER_ID" \
-            --key-id "$ASC_KEY_ID" \
-            --private-key @env:AUTH_KEY \
-            --certificate-key @env:CERTIFICATE_KEY \
-            --delete-stale-profiles
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # State Management
+  provider: ^6.1.1
+  
+  # HTTP & API
+  http: ^1.1.0
+  dio: ^5.3.2
+  
+  # QR Code Scanner
+  mobile_scanner: ^3.5.6
+  qr_flutter: ^4.1.0
+  
+  # PDF Generation & Printing
+  pdf: ^3.10.7
+  printing: ^5.11.0
+  
+  # Native Brother printer support (custom implementation)
+  # another_brother: ^2.2.0  # Removed due to simulator compatibility issues
+  flutter_bluetooth_serial: ^0.4.0
+  
+  # Method channels for native communication (already included in flutter sdk)
+  
+  # Local Storage
+  shared_preferences: ^2.2.2
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.1
+  
+  # Connectivity
+  connectivity_plus: ^5.0.1
+  
+  # UI Components
+  cupertino_icons: ^1.0.2
+  shimmer: ^3.0.0
+  
+  # Permissions
+  permission_handler: ^11.0.1
+  device_info_plus: ^10.1.0
+  
+  # Bluetooth and connectivity
+  flutter_blue_plus: ^1.12.13
+  
+  # Image Handling
+  cached_network_image: ^3.3.0
+  
+  # Utils
+  intl: ^0.18.1
+  uuid: ^4.1.0
+  
+  # Haptic Feedback
+  vibration: ^3.1.4
 
-      - name: Initialize keychain & import certs
-        script: |
-          keychain initialize
-          keychain add-certificates
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.7
 
-      - name: Install CocoaPods (if present)
-        script: |
-          cd "$CM_CLONE_DIR/ios"
-          if [ -f "Podfile" ]; then
-            gem install cocoapods --no-document || true
-            pod repo update || true
-            pod install
-          else
-            echo "No Podfile; skipping pods"
-          fi
-
-      - name: Build IPA (Flutter)
-        script: |
-          cd "$CM_CLONE_DIR"
-          flutter build ipa --release
-
-    artifacts:
-      - build/ios/**/*.ipa
-      - build/ios/**/*.dSYM
-      - build/ios/archive/**/*.xcarchive
-
-    publishing:
-      email:
-        recipients:
-          - info@alimhanna.com
-        notify:
-          success: true
-          failure: true
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/fonts/
+  
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+          weight: 400
