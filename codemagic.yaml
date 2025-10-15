@@ -17,11 +17,12 @@ workflows:
       cocoapods: default
     
     scripts:
-      - name: Set up code signing
+      - name: Set up build environment
         script: |
-          echo "Code signing will be handled automatically by Codemagic"
+          echo "Build environment setup"
           echo "Current directory: $(pwd)"
           ls -la
+          echo "Code signing will be handled automatically by Codemagic"
           
       - name: Install Flutter dependencies
         script: |
