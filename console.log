@@ -1,0 +1,697 @@
+ddc_module_loader.js:1015 DDC is about to load 1/2 scripts with pool size = 1000
+ddc_module_loader.js:1015 DDC is about to load 1104/1104 scripts with pool size = 1000
+ddc_module_loader.js:1583 Starting application from main method in: org-dartlang-app:/web_entrypoint.dart.
+js_primitives.dart:28 🔍 BADGE PROVIDER: Fetching ALL templates globally (like web app)
+js_primitives.dart:28 🌐 HTTP: Making GET request to: https://lightslategray-donkey-866736.hostingersite.com/badges/templates
+js_primitives.dart:28 🌐 HTTP: Base URL: https://lightslategray-donkey-866736.hostingersite.com
+js_primitives.dart:28 🌐 HTTP: Endpoint: /badges/templates
+js_primitives.dart:28 🔄 EventProvider: Starting to load events (forceRefresh: false)
+js_primitives.dart:28 🔄 EventProvider: Calling API service to get events
+js_primitives.dart:28 🔍 API: Fetching events from /events
+js_primitives.dart:28 🌐 HTTP: Making GET request to: https://lightslategray-donkey-866736.hostingersite.com/events
+js_primitives.dart:28 🌐 HTTP: Base URL: https://lightslategray-donkey-866736.hostingersite.com
+js_primitives.dart:28 🌐 HTTP: Endpoint: /events
+js_primitives.dart:28 ══╡ EXCEPTION CAUGHT BY RENDERING LIBRARY ╞═════════════════════════════════════════════════════════
+js_primitives.dart:28 The following assertion was thrown during layout:
+js_primitives.dart:28 A RenderFlex overflowed by 8.0 pixels on the bottom.
+js_primitives.dart:28 
+js_primitives.dart:28 The relevant error-causing widget was:
+js_primitives.dart:28   Column
+js_primitives.dart:28   Column:file:///C:/Users/alimh/Documents/event_manager%209.3%2012.44/event-mobile%20flutter/flutter_app/lib/widgets/loading_shimmer.dart:43:18
+js_primitives.dart:28 
+js_primitives.dart:28 The overflowing RenderFlex has an orientation of Axis.vertical.
+js_primitives.dart:28 The edge of the RenderFlex that is overflowing has been marked in the rendering with a yellow and
+js_primitives.dart:28 black striped pattern. This is usually caused by the contents being too big for the RenderFlex.
+js_primitives.dart:28 Consider applying a flex factor (e.g. using an Expanded widget) to force the children of the
+js_primitives.dart:28 RenderFlex to fit within the available space instead of being sized to their natural size.
+js_primitives.dart:28 This is considered an error condition because it indicates that there is content that cannot be
+js_primitives.dart:28 seen. If the content is legitimately bigger than the available space, consider clipping it with a
+js_primitives.dart:28 ClipRect widget before putting it in the flex, or using a scrollable container rather than a Flex,
+js_primitives.dart:28 like a ListView.
+js_primitives.dart:28 The specific RenderFlex in question is: RenderFlex#538ab OVERFLOWING:
+js_primitives.dart:28   creator: Column ← Padding ← ConstrainedBox ← Container ← Semantics ← DefaultTextStyle ←
+js_primitives.dart:28     AnimatedDefaultTextStyle ← _InkFeatures-[GlobalKey#53cd2 ink renderer] ←
+js_primitives.dart:28     NotificationListener<LayoutChangedNotification> ← CustomPaint ← _ShapeBorderPaint ← PhysicalShape
+js_primitives.dart:28     ← ⋯
+js_primitives.dart:28   parentData: offset=Offset(12.0, 12.0) (can use size)
+js_primitives.dart:28   constraints: BoxConstraints(w=416.0, h=96.0)
+js_primitives.dart:28   size: Size(416.0, 96.0)
+js_primitives.dart:28   direction: vertical
+js_primitives.dart:28   mainAxisAlignment: start
+js_primitives.dart:28   mainAxisSize: min
+js_primitives.dart:28   crossAxisAlignment: start
+js_primitives.dart:28   textDirection: ltr
+js_primitives.dart:28   verticalDirection: down
+js_primitives.dart:28   spacing: 0.0
+js_primitives.dart:28 ◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤
+js_primitives.dart:28 ════════════════════════════════════════════════════════════════════════════════════════════════════
+js_primitives.dart:28 Another exception was thrown: A RenderFlex overflowed by 8.0 pixels on the bottom.
+js_primitives.dart:28 Another exception was thrown: A RenderFlex overflowed by 8.0 pixels on the bottom.
+js_primitives.dart:28 Another exception was thrown: A RenderFlex overflowed by 8.0 pixels on the bottom.
+js_primitives.dart:28 🌐 HTTP: Response status: 200
+js_primitives.dart:28 🌐 HTTP: Response headers: {content-type: application/json}
+js_primitives.dart:28 🌐 HTTP: Response body length: 5466
+js_primitives.dart:28 🌐 HTTP: Response body: [{"id":"template-68d415ad84d0e","name":"Background  Template","eventId":null,"labelSizeId":"label-68d414d1d22e8","isVipTemplate":false,"backgroundColor":"#ffffff","textColor":"#000000","logoUrl":"uploads\/badge-images\/badge_68d4158e4a671_1758729614.webp","backgroundSettings":{"opacity":1,"size":"cover","position":"center","repeat":"no-repeat","blur":0},"dimensions":{"width":3.5,"height":2.4},"fields":[{"id":"1758729628752","type":"text","content":"{firstName} {lastName}","position":{"x":60,"y":90},"size":{"width":200,"height":40},"style":{"fontSize":24,"fontWeight":"normal","color":"#000000"}}],"isActive":true,"createdAt":"2025-09-24 16:00:45","updatedAt":"2025-09-24 16:00:45","labelSizeName":"Background "},{"id":"template-68b5e55928d62","name":"VIP Template","eventId":null,"labelSizeId":"label-68b12d52aa700","isVipTemplate":true,"backgroundColor":"#ffffff","textColor":"#000000","logoUrl":"uploads\/badge-images\/badge_68e556a27c596_1759860386.png","backgroundSettings":{"opacity":1,"size":"cover","position":"center","repeat":"no-repeat","blur":0},"dimensions":{"width":3.5,"height":2.44},"fields":[{"id":"1756751109787","type":"text","content":"{firstName}\n{lastName}","position":{"x":70,"y":110},"size":{"width":200,"height":40},"style":{"fontSize":20,"fontWeight":"bold","color":"#000000"}},{"id":"1756751679504","type":"logo","content":"","position":{"x":130,"y":60},"size":{"width":80,"height":50},"style":{"fontSize":16,"fontWeight":"normal","color":"#000000"}}],"isActive":true,"createdAt":"2025-09-01 18:26:33","updatedAt":"2025-10-07 18:06:31","labelSizeName":"test with background"},{"id":"template-68b1349163626","name":"Background 2.4 Template","eventId":null,"labelSizeId":"label-68b13451b1ed9","isVipTemplate":false,"backgroundColor":"#ffffff","textColor":"#000000","logoUrl":null,"backgroundSettings":null,"dimensions":{"width":2.44,"height":3.5},"fields":[{"id":"1756443778238","type":"text","content":"Sample Text","position":{"x":20,"y":150},"size":{"width":200,"height":40},"style":{"fontSize":16,"fontWeight":"normal","color":"#000000"}}],"isActive":true,"createdAt":"2025-08-29 05:03:13","updatedAt":"2025-08-29 05:03:13","labelSizeName":"Background 2.4"},{"id":"template-68b12d7e1ae67","name":"test with background Template","eventId":null,"labelSizeId":"label-68b12d52aa700","isVipTemplate":false,"backgroundColor":"#ffffff","textColor":"#000000","logoUrl":"uploads\/badge-images\/badge_68e5566432f97_1759860324.png","backgroundSettings":{"opacity":1,"size":"cover","position":"center","repeat":"no-repeat","blur":0},"dimensions":{"width":3.5,"height":2.44},"fields":[{"id":"1756442113214","type":"text","content":"{firstName}\n{lastName}","position":{"x":80,"y":100},"size":{"width":200,"height":40},"style":{"fontSize":26,"fontWeight":"bold","color":"#000000"}}],"isActive":true,"createdAt":"2025-08-29 04:33:02","updatedAt":"2025-10-07 18:05:29","labelSizeName":"test with background"},{"id":"template-68b1296299637","name":"Test label 08-28 Template","eventId":null,"labelSizeId":"label-68b128ddbb32e","isVipTemplate":false,"backgroundColor":"#ffffff","textColor":"#000000","logoUrl":"uploads\/badge-images\/badge_68b13043b57c8_1756442691.png","backgroundSettings":{"opacity":1,"size":"cover","position":"center","repeat":"no-repeat","blur":0},"dimensions":{"width":3.5,"height":2.44},"fields":[{"id":"1756440839212","type":"text","content":"{firstName} \n{lastName}","position":{"x":70,"y":90},"size":{"width":200,"height":40},"style":{"fontSize":26,"fontWeight":"bold","color":"#000000"}},{"id":"1756440876655","type":"image","content":"","position":{"x":220,"y":30},"size":{"width":100,"height":50},"style":{"fontSize":16,"fontWeight":"normal","color":"#000000"}}],"isActive":true,"createdAt":"2025-08-29 04:15:30","updatedAt":"2025-08-29 04:45:08","labelSizeName":"Test label 08-28"},{"id":"template-68af51d06a035","name":"Brother QL - 820NWB Template (Copy)","eventId":null,"labelSizeId":"label-68a9b617d726b","isVipTemplate":true,"backgroundColor":"#ffffff","textColor":"#000000","logoUrl":"uploads\/badge-images\/badge_68b0c1ddab676_1756414429.png","backgroundSettings":{"opacity":1,"size":"100% 100%","position":"center","repeat":"no-repeat","blur":0},"dimensions":{"width":3.5,"height":2.44},"fields":[{"id":"1756319845297","type":"text","content":"Sample","position":{"x":20,"y":170},"size":{"width":200,"height":40},"style":{"fontSize":30,"fontWeight":"bold","color":"#000000"}},{"id":"1756414461714","type":"logo","content":"","position":{"x":240,"y":110},"size":{"width":80,"height":80},"style":{"fontSize":16,"fontWeight":"normal","color":"#000000"}}],"isActive":true,"createdAt":"2025-08-27 18:43:28","updatedAt":"2025-08-28 21:10:51","labelSizeName":"Brother QL - 820NWB"},{"id":"template-68af50659ae13","name":"Brother QL - 820NWB Template","eventId":null,"labelSizeId":"label-68a9b617d726b","isVipTemplate":false,"backgroundColor":"#ffffff","textColor":"#000000","logoUrl":"uploads\/badge-images\/badge_68b0bd14087c4_1756413204.png","backgroundSettings":{"opacity":1,"size":"cover","position":"center","repeat":"no-repeat","blur":0},"dimensions":{"width":3.5,"height":2.44},"fields":[{"id":"1756319845297","type":"text","content":"{firstName} {lastName}","position":{"x":10,"y":140},"size":{"width":200,"height":40},"style":{"fontSize":16,"fontWeight":"normal","color":"#000000"}}],"isActive":true,"createdAt":"2025-08-27 18:37:25","updatedAt":"2025-08-28 20:33:35","labelSizeName":"Brother QL - 820NWB"}]
+js_primitives.dart:28 🌐 HTTP: Decoded response type: List<dynamic>
+js_primitives.dart:28 🔍 BADGE TEMPLATES: Raw API response type: List<dynamic>
+js_primitives.dart:28 🔍 BADGE TEMPLATES: Raw API response: [{id: template-68d415ad84d0e, name: Background  Template, eventId: null, labelSizeId: label-68d414d1d22e8, isVipTemplate: false, backgroundColor: #ffffff, textColor: #000000, logoUrl: uploads/badge-images/badge_68d4158e4a671_1758729614.webp, backgroundSettings: {opacity: 1, size: cover, position: center, repeat: no-repeat, blur: 0}, dimensions: {width: 3.5, height: 2.4}, fields: [{id: 1758729628752, type: text, content: {firstName} {lastName}, position: {x: 60, y: 90}, size: {width: 200, height: 40}, style: {fontSize: 24, fontWeight: normal, color: #000000}}], isActive: true, createdAt: 2025-09-24 16:00:45, updatedAt: 2025-09-24 16:00:45, labelSizeName: Background }, {id: template-68b5e55928d62, name: VIP Template, eventId: null, labelSizeId: label-68b12d52aa700, isVipTemplate: true, backgroundColor: #ffffff, textColor: #000000, logoUrl: uploads/badge-images/badge_68e556a27c596_1759860386.png, backgroundSettings: {opacity: 1, size: cover, position: center, repeat: no-repeat, blur: 0}, dimensions: {width: 3.5, height: 2.44}, fields: [{id: 1756751109787, type: text, content: {firstName}
+{lastName}, position: {x: 70, y: 110}, size: {width: 200, height: 40}, style: {fontSize: 20, fontWeight: bold, color: #000000}}, {id: 1756751679504, type: logo, content: , position: {x: 130, y: 60}, size: {width: 80, height: 50}, style: {fontSize: 16, fontWeight: normal, color: #000000}}], isActive: true, createdAt: 2025-09-01 18:26:33, updatedAt: 2025-10-07 18:06:31, labelSizeName: test with background}, {id: template-68b1349163626, name: Background 2.4 Template, eventId: null, labelSizeId: label-68b13451b1ed9, isVipTemplate: false, backgroundColor: #ffffff, textColor: #000000, logoUrl: null, backgroundSettings: null, dimensions: {width: 2.44, height: 3.5}, fields: [{id: 1756443778238, type: text, content: Sample Text, position: {x: 20, y: 150}, size: {width: 200, height: 40}, style: {fontSize: 16, fontWeight: normal, color: #000000}}], isActive: true, createdAt: 2025-08-29 05:03:13, updatedAt: 2025-08-29 05:03:13, labelSizeName: Background 2.4}, {id: template-68b12d7e1ae67, name: test with background Template, eventId: null, labelSizeId: label-68b12d52aa700, isVipTemplate: false, backgroundColor: #ffffff, textColor: #000000, logoUrl: uploads/badge-images/badge_68e5566432f97_1759860324.png, backgroundSettings: {opacity: 1, size: cover, position: center, repeat: no-repeat, blur: 0}, dimensions: {width: 3.5, height: 2.44}, fields: [{id: 1756442113214, type: text, content: {firstName}
+{lastName}, position: {x: 80, y: 100}, size: {width: 200, height: 40}, style: {fontSize: 26, fontWeight: bold, color: #000000}}], isActive: true, createdAt: 2025-08-29 04:33:02, updatedAt: 2025-10-07 18:05:29, labelSizeName: test with background}, {id: template-68b1296299637, name: Test label 08-28 Template, eventId: null, labelSizeId: label-68b128ddbb32e, isVipTemplate: false, backgroundColor: #ffffff, textColor: #000000, logoUrl: uploads/badge-images/badge_68b13043b57c8_1756442691.png, backgroundSettings: {opacity: 1, size: cover, position: center, repeat: no-repeat, blur: 0}, dimensions: {width: 3.5, height: 2.44}, fields: [{id: 1756440839212, type: text, content: {firstName} 
+{lastName}, position: {x: 70, y: 90}, size: {width: 200, height: 40}, style: {fontSize: 26, fontWeight: bold, color: #000000}}, {id: 1756440876655, type: image, content: , position: {x: 220, y: 30}, size: {width: 100, height: 50}, style: {fontSize: 16, fontWeight: normal, color: #000000}}], isActive: true, createdAt: 2025-08-29 04:15:30, updatedAt: 2025-08-29 04:45:08, labelSizeName: Test label 08-28}, {id: template-68af51d06a035, name: Brother QL - 820NWB Template (Copy), eventId: null, labelSizeId: label-68a9b617d726b, isVipTemplate: true, backgroundColor: #ffffff, textColor: #000000, logoUrl: uploads/badge-images/badge_68b0c1ddab676_1756414429.png, backgroundSettings: {opacity: 1, size: 100% 100%, position: center, repeat: no-repeat, blur: 0}, dimensions: {width: 3.5, height: 2.44}, fields: [{id: 1756319845297, type: text, content: Sample, position: {x: 20, y: 170}, size: {width: 200, height: 40}, style: {fontSize: 30, fontWeight: bold, color: #000000}}, {id: 1756414461714, type: logo, content: , position: {x: 240, y: 110}, size: {width: 80, height: 80}, style: {fontSize: 16, fontWeight: normal, color: #000000}}], isActive: true, createdAt: 2025-08-27 18:43:28, updatedAt: 2025-08-28 21:10:51, labelSizeName: Brother QL - 820NWB}, {id: template-68af50659ae13, name: Brother QL - 820NWB Template, eventId: null, labelSizeId: label-68a9b617d726b, isVipTemplate: false, backgroundColor: #ffffff, textColor: #000000, logoUrl: uploads/badge-images/badge_68b0bd14087c4_1756413204.png, backgroundSettings: {opacity: 1, size: cover, position: center, repeat: no-repeat, blur: 0}, dimensions: {width: 3.5, height: 2.44}, fields: [{id: 1756319845297, type: text, content: {firstName} {lastName}, position: {x: 10, y: 140}, size: {width: 200, height: 40}, style: {fontSize: 16, fontWeight: normal, color: #000000}}], isActive: true, createdAt: 2025-08-27 18:37:25, updatedAt: 2025-08-28 20:33:35, labelSizeName: Brother QL - 820NWB}]
+js_primitives.dart:28 🔍 BADGE TEMPLATES: Found 7 templates
+js_primitives.dart:28 🔍 BADGE TEMPLATES: Template 0:
+js_primitives.dart:28   - ID: template-68d415ad84d0e
+js_primitives.dart:28   - Name: Background  Template
+js_primitives.dart:28   - EventId: null
+js_primitives.dart:28   - IsVipTemplate: false
+js_primitives.dart:28   - BackgroundColor: #ffffff
+js_primitives.dart:28   - LogoUrl: uploads/badge-images/badge_68d4158e4a671_1758729614.webp
+js_primitives.dart:28   - Dimensions: {width: 3.5, height: 2.4}
+js_primitives.dart:28   - Fields type: List<dynamic>
+js_primitives.dart:28   - Fields content: [{id: 1758729628752, type: text, content: {firstName} {lastName}, position: {x: 60, y: 90}, size: {width: 200, height: 40}, style: {fontSize: 24, fontWeight: normal, color: #000000}}]
+js_primitives.dart:28 ✅ BADGE TEMPLATES: Fields is a List with 1 items
+js_primitives.dart:28 🔍 BADGE TEMPLATES: Template 1:
+js_primitives.dart:28   - ID: template-68b5e55928d62
+js_primitives.dart:28   - Name: VIP Template
+js_primitives.dart:28   - EventId: null
+js_primitives.dart:28   - IsVipTemplate: true
+js_primitives.dart:28   - BackgroundColor: #ffffff
+js_primitives.dart:28   - LogoUrl: uploads/badge-images/badge_68e556a27c596_1759860386.png
+js_primitives.dart:28   - Dimensions: {width: 3.5, height: 2.44}
+js_primitives.dart:28   - Fields type: List<dynamic>
+js_primitives.dart:28   - Fields content: [{id: 1756751109787, type: text, content: {firstName}
+{lastName}, position: {x: 70, y: 110}, size: {width: 200, height: 40}, style: {fontSize: 20, fontWeight: bold, color: #000000}}, {id: 1756751679504, type: logo, content: , position: {x: 130, y: 60}, size: {width: 80, height: 50}, style: {fontSize: 16, fontWeight: normal, color: #000000}}]
+js_primitives.dart:28 ✅ BADGE TEMPLATES: Fields is a List with 2 items
+js_primitives.dart:28 🔍 BADGE TEMPLATES: Template 2:
+js_primitives.dart:28   - ID: template-68b1349163626
+js_primitives.dart:28   - Name: Background 2.4 Template
+js_primitives.dart:28   - EventId: null
+js_primitives.dart:28   - IsVipTemplate: false
+js_primitives.dart:28   - BackgroundColor: #ffffff
+js_primitives.dart:28   - LogoUrl: null
+js_primitives.dart:28   - Dimensions: {width: 2.44, height: 3.5}
+js_primitives.dart:28   - Fields type: List<dynamic>
+js_primitives.dart:28   - Fields content: [{id: 1756443778238, type: text, content: Sample Text, position: {x: 20, y: 150}, size: {width: 200, height: 40}, style: {fontSize: 16, fontWeight: normal, color: #000000}}]
+js_primitives.dart:28 ✅ BADGE TEMPLATES: Fields is a List with 1 items
+js_primitives.dart:28 🔍 BADGE TEMPLATES: Template 3:
+js_primitives.dart:28   - ID: template-68b12d7e1ae67
+js_primitives.dart:28   - Name: test with background Template
+js_primitives.dart:28   - EventId: null
+js_primitives.dart:28   - IsVipTemplate: false
+js_primitives.dart:28   - BackgroundColor: #ffffff
+js_primitives.dart:28   - LogoUrl: uploads/badge-images/badge_68e5566432f97_1759860324.png
+js_primitives.dart:28   - Dimensions: {width: 3.5, height: 2.44}
+js_primitives.dart:28   - Fields type: List<dynamic>
+js_primitives.dart:28   - Fields content: [{id: 1756442113214, type: text, content: {firstName}
+{lastName}, position: {x: 80, y: 100}, size: {width: 200, height: 40}, style: {fontSize: 26, fontWeight: bold, color: #000000}}]
+js_primitives.dart:28 ✅ BADGE TEMPLATES: Fields is a List with 1 items
+js_primitives.dart:28 🔍 BADGE TEMPLATES: Template 4:
+js_primitives.dart:28   - ID: template-68b1296299637
+js_primitives.dart:28   - Name: Test label 08-28 Template
+js_primitives.dart:28   - EventId: null
+js_primitives.dart:28   - IsVipTemplate: false
+js_primitives.dart:28   - BackgroundColor: #ffffff
+js_primitives.dart:28   - LogoUrl: uploads/badge-images/badge_68b13043b57c8_1756442691.png
+js_primitives.dart:28   - Dimensions: {width: 3.5, height: 2.44}
+js_primitives.dart:28   - Fields type: List<dynamic>
+js_primitives.dart:28   - Fields content: [{id: 1756440839212, type: text, content: {firstName} 
+{lastName}, position: {x: 70, y: 90}, size: {width: 200, height: 40}, style: {fontSize: 26, fontWeight: bold, color: #000000}}, {id: 1756440876655, type: image, content: , position: {x: 220, y: 30}, size: {width: 100, height: 50}, style: {fontSize: 16, fontWeight: normal, color: #000000}}]
+js_primitives.dart:28 ✅ BADGE TEMPLATES: Fields is a List with 2 items
+js_primitives.dart:28 🔍 BADGE TEMPLATES: Template 5:
+js_primitives.dart:28   - ID: template-68af51d06a035
+js_primitives.dart:28   - Name: Brother QL - 820NWB Template (Copy)
+js_primitives.dart:28   - EventId: null
+js_primitives.dart:28   - IsVipTemplate: true
+js_primitives.dart:28   - BackgroundColor: #ffffff
+js_primitives.dart:28   - LogoUrl: uploads/badge-images/badge_68b0c1ddab676_1756414429.png
+js_primitives.dart:28   - Dimensions: {width: 3.5, height: 2.44}
+js_primitives.dart:28   - Fields type: List<dynamic>
+js_primitives.dart:28   - Fields content: [{id: 1756319845297, type: text, content: Sample, position: {x: 20, y: 170}, size: {width: 200, height: 40}, style: {fontSize: 30, fontWeight: bold, color: #000000}}, {id: 1756414461714, type: logo, content: , position: {x: 240, y: 110}, size: {width: 80, height: 80}, style: {fontSize: 16, fontWeight: normal, color: #000000}}]
+js_primitives.dart:28 ✅ BADGE TEMPLATES: Fields is a List with 2 items
+js_primitives.dart:28 🔍 BADGE TEMPLATES: Template 6:
+js_primitives.dart:28   - ID: template-68af50659ae13
+js_primitives.dart:28   - Name: Brother QL - 820NWB Template
+js_primitives.dart:28   - EventId: null
+js_primitives.dart:28   - IsVipTemplate: false
+js_primitives.dart:28   - BackgroundColor: #ffffff
+js_primitives.dart:28   - LogoUrl: uploads/badge-images/badge_68b0bd14087c4_1756413204.png
+js_primitives.dart:28   - Dimensions: {width: 3.5, height: 2.44}
+js_primitives.dart:28   - Fields type: List<dynamic>
+js_primitives.dart:28   - Fields content: [{id: 1756319845297, type: text, content: {firstName} {lastName}, position: {x: 10, y: 140}, size: {width: 200, height: 40}, style: {fontSize: 16, fontWeight: normal, color: #000000}}]
+js_primitives.dart:28 ✅ BADGE TEMPLATES: Fields is a List with 1 items
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Parsing template template-68d415ad84d0e
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Fields raw value: [{id: 1758729628752, type: text, content: {firstName} {lastName}, position: {x: 60, y: 90}, size: {width: 200, height: 40}, style: {fontSize: 24, fontWeight: normal, color: #000000}}]
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Fields type: List<dynamic>
+js_primitives.dart:28 ✅ BADGE TEMPLATE: Successfully parsed 1 fields from List
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Final fields count: 1
+js_primitives.dart:28   Field 0: text - "{firstName} {lastName}" at (60, 90)
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Parsing template template-68b5e55928d62
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Fields raw value: [{id: 1756751109787, type: text, content: {firstName}
+{lastName}, position: {x: 70, y: 110}, size: {width: 200, height: 40}, style: {fontSize: 20, fontWeight: bold, color: #000000}}, {id: 1756751679504, type: logo, content: , position: {x: 130, y: 60}, size: {width: 80, height: 50}, style: {fontSize: 16, fontWeight: normal, color: #000000}}]
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Fields type: List<dynamic>
+js_primitives.dart:28 ✅ BADGE TEMPLATE: Successfully parsed 2 fields from List
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Final fields count: 2
+js_primitives.dart:28   Field 0: text - "{firstName}
+{lastName}" at (70, 110)
+js_primitives.dart:28   Field 1: logo - "" at (130, 60)
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Parsing template template-68b1349163626
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Fields raw value: [{id: 1756443778238, type: text, content: Sample Text, position: {x: 20, y: 150}, size: {width: 200, height: 40}, style: {fontSize: 16, fontWeight: normal, color: #000000}}]
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Fields type: List<dynamic>
+js_primitives.dart:28 ✅ BADGE TEMPLATE: Successfully parsed 1 fields from List
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Final fields count: 1
+js_primitives.dart:28   Field 0: text - "Sample Text" at (20, 150)
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Parsing template template-68b12d7e1ae67
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Fields raw value: [{id: 1756442113214, type: text, content: {firstName}
+{lastName}, position: {x: 80, y: 100}, size: {width: 200, height: 40}, style: {fontSize: 26, fontWeight: bold, color: #000000}}]
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Fields type: List<dynamic>
+js_primitives.dart:28 ✅ BADGE TEMPLATE: Successfully parsed 1 fields from List
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Final fields count: 1
+js_primitives.dart:28   Field 0: text - "{firstName}
+{lastName}" at (80, 100)
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Parsing template template-68b1296299637
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Fields raw value: [{id: 1756440839212, type: text, content: {firstName} 
+{lastName}, position: {x: 70, y: 90}, size: {width: 200, height: 40}, style: {fontSize: 26, fontWeight: bold, color: #000000}}, {id: 1756440876655, type: image, content: , position: {x: 220, y: 30}, size: {width: 100, height: 50}, style: {fontSize: 16, fontWeight: normal, color: #000000}}]
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Fields type: List<dynamic>
+js_primitives.dart:28 ✅ BADGE TEMPLATE: Successfully parsed 2 fields from List
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Final fields count: 2
+js_primitives.dart:28   Field 0: text - "{firstName} 
+{lastName}" at (70, 90)
+js_primitives.dart:28   Field 1: image - "" at (220, 30)
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Parsing template template-68af51d06a035
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Fields raw value: [{id: 1756319845297, type: text, content: Sample, position: {x: 20, y: 170}, size: {width: 200, height: 40}, style: {fontSize: 30, fontWeight: bold, color: #000000}}, {id: 1756414461714, type: logo, content: , position: {x: 240, y: 110}, size: {width: 80, height: 80}, style: {fontSize: 16, fontWeight: normal, color: #000000}}]
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Fields type: List<dynamic>
+js_primitives.dart:28 ✅ BADGE TEMPLATE: Successfully parsed 2 fields from List
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Final fields count: 2
+js_primitives.dart:28   Field 0: text - "Sample" at (20, 170)
+js_primitives.dart:28   Field 1: logo - "" at (240, 110)
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Parsing template template-68af50659ae13
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Fields raw value: [{id: 1756319845297, type: text, content: {firstName} {lastName}, position: {x: 10, y: 140}, size: {width: 200, height: 40}, style: {fontSize: 16, fontWeight: normal, color: #000000}}]
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Fields type: List<dynamic>
+js_primitives.dart:28 ✅ BADGE TEMPLATE: Successfully parsed 1 fields from List
+js_primitives.dart:28 🔍 BADGE TEMPLATE: Final fields count: 1
+js_primitives.dart:28   Field 0: text - "{firstName} {lastName}" at (10, 140)
+js_primitives.dart:28 🔍 BADGE PROVIDER: Loaded 7 templates
+js_primitives.dart:28 🔍 BADGE PROVIDER: Template "Background  Template" has 1 fields
+js_primitives.dart:28 🔍 BADGE PROVIDER: Template "VIP Template" has 2 fields
+js_primitives.dart:28 🔍 BADGE PROVIDER: Template "Background 2.4 Template" has 1 fields
+js_primitives.dart:28 🔍 BADGE PROVIDER: Template "test with background Template" has 1 fields
+js_primitives.dart:28 🔍 BADGE PROVIDER: Template "Test label 08-28 Template" has 2 fields
+js_primitives.dart:28 🔍 BADGE PROVIDER: Template "Brother QL - 820NWB Template (Copy)" has 2 fields
+js_primitives.dart:28 🔍 BADGE PROVIDER: Template "Brother QL - 820NWB Template" has 1 fields
+js_primitives.dart:28 ✅ BADGE PROVIDER: Loaded 7 templates, will select based on attendee VIP status
+js_primitives.dart:28 🌐 HTTP: Response status: 200
+js_primitives.dart:28 🌐 HTTP: Response headers: {content-type: application/json}
+js_primitives.dart:28 🌐 HTTP: Response body length: 1886
+js_primitives.dart:28 🌐 HTTP: Response body: [{"id":"evt_68b808ae52e514.67564750","eventbriteId":"1564441850689","name":"LLM Mechanics: Decode AI Models. Get Results That Matter.","description":"Bring your laptop for an impactful experience.","startDate":"2025-09-04 22:00:00","endDate":"2025-09-05 00:30:00","venue":"TBD","status":"published","totalAttendees":"147","checkedInCount":"61","vipCount":"0","createdAt":"2025-09-03 09:21:50","updatedAt":"2025-09-05 09:35:17","regularBadgeTemplateId":"template-68b12d7e1ae67","vipBadgeTemplateId":"template-68b5e55928d62","modified_at":"2025-09-05 09:35:17","created_at":"2025-09-03 09:21:50","enable_direct_printing":"1","default_printer_name":null,"auto_print_on_checkin":"0","calculatedStatus":"ended"},{"id":"evt_68c2e45bd2ff53.52344712","eventbriteId":"1660146897059","name":"ddd","description":"ddd","startDate":"2025-10-16 07:00:00","endDate":"2025-10-16 09:00:00","venue":"TBD","status":"published","totalAttendees":"0","checkedInCount":"0","vipCount":"0","createdAt":"2025-09-11 15:01:47","updatedAt":"2025-09-24 16:08:27","regularBadgeTemplateId":"template-68b12d7e1ae67","vipBadgeTemplateId":"template-68b5e55928d62","modified_at":"2025-09-24 16:08:27","created_at":"2025-09-11 15:01:47","enable_direct_printing":"1","default_printer_name":null,"auto_print_on_checkin":"0","calculatedStatus":"upcoming"},{"id":"evt_68c2fe314dd637.27993756","eventbriteId":"1689068873469","name":"event","description":"check","startDate":"2025-09-11 21:00:00","endDate":"2025-09-12 20:30:00","venue":"TBD","status":"published","totalAttendees":"1","checkedInCount":"0","vipCount":"0","createdAt":"2025-09-11 16:52:01","updatedAt":"2025-09-11 16:57:10","regularBadgeTemplateId":null,"vipBadgeTemplateId":null,"modified_at":"2025-09-11 16:57:10","created_at":"2025-09-11 16:52:01","enable_direct_printing":"1","default_printer_name":null,"auto_print_on_checkin":"0","calculatedStatus":"ended"}]
+js_primitives.dart:28 🌐 HTTP: Decoded response type: List<dynamic>
+js_primitives.dart:28 📡 API: Raw response type: List<dynamic>
+js_primitives.dart:28 📡 API: Raw response: [{id: evt_68b808ae52e514.67564750, eventbriteId: 1564441850689, name: LLM Mechanics: Decode AI Models. Get Results That Matter., description: Bring your laptop for an impactful experience., startDate: 2025-09-04 22:00:00, endDate: 2025-09-05 00:30:00, venue: TBD, status: published, totalAttendees: 147, checkedInCount: 61, vipCount: 0, createdAt: 2025-09-03 09:21:50, updatedAt: 2025-09-05 09:35:17, regularBadgeTemplateId: template-68b12d7e1ae67, vipBadgeTemplateId: template-68b5e55928d62, modified_at: 2025-09-05 09:35:17, created_at: 2025-09-03 09:21:50, enable_direct_printing: 1, default_printer_name: null, auto_print_on_checkin: 0, calculatedStatus: ended}, {id: evt_68c2e45bd2ff53.52344712, eventbriteId: 1660146897059, name: ddd, description: ddd, startDate: 2025-10-16 07:00:00, endDate: 2025-10-16 09:00:00, venue: TBD, status: published, totalAttendees: 0, checkedInCount: 0, vipCount: 0, createdAt: 2025-09-11 15:01:47, updatedAt: 2025-09-24 16:08:27, regularBadgeTemplateId: template-68b12d7e1ae67, vipBadgeTemplateId: template-68b5e55928d62, modified_at: 2025-09-24 16:08:27, created_at: 2025-09-11 15:01:47, enable_direct_printing: 1, default_printer_name: null, auto_print_on_checkin: 0, calculatedStatus: upcoming}, {id: evt_68c2fe314dd637.27993756, eventbriteId: 1689068873469, name: event, description: check, startDate: 2025-09-11 21:00:00, endDate: 2025-09-12 20:30:00, venue: TBD, status: published, totalAttendees: 1, checkedInCount: 0, vipCount: 0, createdAt: 2025-09-11 16:52:01, updatedAt: 2025-09-11 16:57:10, regularBadgeTemplateId: null, vipBadgeTemplateId: null, modified_at: 2025-09-11 16:57:10, created_at: 2025-09-11 16:52:01, enable_direct_printing: 1, default_printer_name: null, auto_print_on_checkin: 0, calculatedStatus: ended}]
+js_primitives.dart:28 📡 API: Response is List with 3 items
+js_primitives.dart:28 📡 API: Parsing event 0: {id: evt_68b808ae52e514.67564750, eventbriteId: 1564441850689, name: LLM Mechanics: Decode AI Models. Get Results That Matter., description: Bring your laptop for an impactful experience., startDate: 2025-09-04 22:00:00, endDate: 2025-09-05 00:30:00, venue: TBD, status: published, totalAttendees: 147, checkedInCount: 61, vipCount: 0, createdAt: 2025-09-03 09:21:50, updatedAt: 2025-09-05 09:35:17, regularBadgeTemplateId: template-68b12d7e1ae67, vipBadgeTemplateId: template-68b5e55928d62, modified_at: 2025-09-05 09:35:17, created_at: 2025-09-03 09:21:50, enable_direct_printing: 1, default_printer_name: null, auto_print_on_checkin: 0, calculatedStatus: ended}
+js_primitives.dart:28 ✅ API: Successfully parsed event: LLM Mechanics: Decode AI Models. Get Results That Matter. (evt_68b808ae52e514.67564750)
+js_primitives.dart:28 📡 API: Parsing event 1: {id: evt_68c2e45bd2ff53.52344712, eventbriteId: 1660146897059, name: ddd, description: ddd, startDate: 2025-10-16 07:00:00, endDate: 2025-10-16 09:00:00, venue: TBD, status: published, totalAttendees: 0, checkedInCount: 0, vipCount: 0, createdAt: 2025-09-11 15:01:47, updatedAt: 2025-09-24 16:08:27, regularBadgeTemplateId: template-68b12d7e1ae67, vipBadgeTemplateId: template-68b5e55928d62, modified_at: 2025-09-24 16:08:27, created_at: 2025-09-11 15:01:47, enable_direct_printing: 1, default_printer_name: null, auto_print_on_checkin: 0, calculatedStatus: upcoming}
+js_primitives.dart:28 ✅ API: Successfully parsed event: ddd (evt_68c2e45bd2ff53.52344712)
+js_primitives.dart:28 📡 API: Parsing event 2: {id: evt_68c2fe314dd637.27993756, eventbriteId: 1689068873469, name: event, description: check, startDate: 2025-09-11 21:00:00, endDate: 2025-09-12 20:30:00, venue: TBD, status: published, totalAttendees: 1, checkedInCount: 0, vipCount: 0, createdAt: 2025-09-11 16:52:01, updatedAt: 2025-09-11 16:57:10, regularBadgeTemplateId: null, vipBadgeTemplateId: null, modified_at: 2025-09-11 16:57:10, created_at: 2025-09-11 16:52:01, enable_direct_printing: 1, default_printer_name: null, auto_print_on_checkin: 0, calculatedStatus: ended}
+js_primitives.dart:28 ✅ API: Successfully parsed event: event (evt_68c2fe314dd637.27993756)
+js_primitives.dart:28 📡 API: Successfully parsed 3 events
+js_primitives.dart:28 📊 EventProvider: Received 3 events from API
+js_primitives.dart:28 📊 EventProvider: First event details:
+js_primitives.dart:28   - ID: evt_68b808ae52e514.67564750
+js_primitives.dart:28   - Name: LLM Mechanics: Decode AI Models. Get Results That Matter.
+js_primitives.dart:28   - Status: published
+js_primitives.dart:28   - Display Status: ended
+js_primitives.dart:28   - Start Date: 2025-09-04 19:00:00.000
+js_primitives.dart:28   - End Date: 2025-09-04 21:30:00.000
+js_primitives.dart:28   - Venue: TBD
+js_primitives.dart:28   - Total Attendees: 147
+js_primitives.dart:28 📊 EventProvider: Updated _events list with 3 events
+js_primitives.dart:28 📊 EventProvider: Notifying listeners
+js_primitives.dart:28 ✅ EventProvider: Events loaded successfully
+js_primitives.dart:28 🔄 EventProvider: Loading completed
+js_primitives.dart:28 📦 BADGE PROVIDER: Cached event data for: LLM Mechanics: Decode AI Models. Get Results That Matter. (evt_68b808ae52e514.67564750)
+js_primitives.dart:28 📦 BADGE PROVIDER: Regular template ID: "template-68b12d7e1ae67"
+js_primitives.dart:28 📦 BADGE PROVIDER: VIP template ID: "template-68b5e55928d62"
+js_primitives.dart:28 📦 BADGE PROVIDER: Available templates when caching: Background  Template(template-68d415ad84d0e), VIP Template(template-68b5e55928d62), Background 2.4 Template(template-68b1349163626), test with background Template(template-68b12d7e1ae67), Test label 08-28 Template(template-68b1296299637), Brother QL - 820NWB Template (Copy)(template-68af51d06a035), Brother QL - 820NWB Template(template-68af50659ae13)
+js_primitives.dart:28 📦 BADGE PROVIDER: Regular template "template-68b12d7e1ae67" exists: true
+js_primitives.dart:28 📦 BADGE PROVIDER: VIP template "template-68b5e55928d62" exists: true
+js_primitives.dart:28 📦 BADGE PROVIDER: Cached event data for: LLM Mechanics: Decode AI Models. Get Results That Matter. (evt_68b808ae52e514.67564750)
+js_primitives.dart:28 📦 BADGE PROVIDER: Regular template ID: "template-68b12d7e1ae67"
+js_primitives.dart:28 📦 BADGE PROVIDER: VIP template ID: "template-68b5e55928d62"
+js_primitives.dart:28 📦 BADGE PROVIDER: Available templates when caching: Background  Template(template-68d415ad84d0e), VIP Template(template-68b5e55928d62), Background 2.4 Template(template-68b1349163626), test with background Template(template-68b12d7e1ae67), Test label 08-28 Template(template-68b1296299637), Brother QL - 820NWB Template (Copy)(template-68af51d06a035), Brother QL - 820NWB Template(template-68af50659ae13)
+js_primitives.dart:28 📦 BADGE PROVIDER: Regular template "template-68b12d7e1ae67" exists: true
+js_primitives.dart:28 📦 BADGE PROVIDER: VIP template "template-68b5e55928d62" exists: true
+js_primitives.dart:28 Another exception was thrown: setState() or markNeedsBuild() called during build.
+js_primitives.dart:28 Another exception was thrown: setState() or markNeedsBuild() called during build.
+js_primitives.dart:28 🌐 HTTP: Making GET request to: https://lightslategray-donkey-866736.hostingersite.com/attendees/evt_68b808ae52e514.67564750
+js_primitives.dart:28 🌐 HTTP: Base URL: https://lightslategray-donkey-866736.hostingersite.com
+js_primitives.dart:28 🌐 HTTP: Endpoint: /attendees/evt_68b808ae52e514.67564750
+js_primitives.dart:28 🌐 HTTP: Response status: 200
+js_primitives.dart:28 🌐 HTTP: Response headers: {content-type: application/json}
+js_primitives.dart:28 🌐 HTTP: Response body length: 81704
+js_primitives.dart:28 🌐 HTTP: Response body: [{"id":"walkin-1757025119-9478","eventId":"evt_68b808ae52e514.67564750","eventbriteId":null,"firstName":"gelayol","lastName":"mohammadnazar","email":"gm0057@uah.edu","ticketType":"Walk-in","isVip":false,"isCheckedIn":true,"checkedInAt":"2025-09-15 14:52:02","qrCode":"WALKIN-walkin-1757025119-9478","badgeGenerated":false,"vipLogoUrl":null,"createdAt":"2025-09-04 22:31:06","updatedAt":"2025-09-15 14:52:02","isWalkIn":"0","ticketPrice":0,"jobTitle":null,"company":null,"invitation_status":"pending","last_invitation_sent_at":null,"source":"eventbrite"},{"id":"walkin-1757025003-6467","eventId":"evt_68b808ae52e514.67564750","eventbriteId":null,"firstName":"Rishi","lastName":"Parikh","email":"rishiparikh1998@gmail.com","ticketType":"Walk-in","isVip":false,"isCheckedIn":true,"checkedInAt":"2025-09-04 22:30:03","qrCode":"WALKIN-walkin-1757025003-6467","badgeGenerated":false,"vipLogoUrl":null,"createdAt":"2025-09-04 22:23:39","updatedAt":"2025-09-04 22:30:03","isWalkIn":"0","ticketPrice":0,"jobTitle":null,"company":null,"invitation_status":"pending","last_invitation_sent_at":null,"source":"eventbrite"},{"id":"walkin-1757021723-1235","eventId":"evt_68b808ae52e514.67564750","eventbriteId":null,"firstName":"Sami","lastName":"Hadir","email":"sami@joinmeister.com","ticketType":"Walk-in","isVip":false,"isCheckedIn":true,"checkedInAt":"2025-09-24 10:51:00","qrCode":"WALKIN-walkin-1757021723-1235","badgeGenerated":false,"vipLogoUrl":null,"createdAt":"2025-09-04 21:35:08","updatedAt":"2025-09-24 10:51:00","isWalkIn":"0","ticketPrice":0,"jobTitle":null,"company":null,"invitation_status":"pending","last_invitation_sent_at":null,"source":"eventbrite"},{"id":"walkin-1757009152-7220","eventId":"evt_68b808ae52e514.67564750","eventbriteId":null,"firstName":"Alex","lastName":"Mhanna","email":"Alex@joinmeister.com","ticketType":"Walk-in","isVip":true,"isCheckedIn":true,"checkedInAt":"2025-09-24 10:51:43","qrCode":"WALKIN-walkin-1757009152-7220","badgeGenerated":false,"vipLogoUrl":null,"createdAt":"2025-09-04 18:05:37","updatedAt":"2025-10-07 20:15:05","isWalkIn":"0","ticketPrice":0,"jobTitle":null,"company":null,"invitation_status":"pending","last_invitation_sent_at":null,"source":"eventbrite"},{"id":"walkin-1757008660-5081","eventId":"evt_68b808ae52e514.67564750","eventbriteId":null,"firstName":"Rigved","lastName":"Joshi","email":"rpg0001@uah.edu","ticketType":"Walk-in","isVip":false,"isCheckedIn":true,"checkedInAt":"2025-09-28 16:13:37","qrCode":"WALKIN-walkin-1757008660-5081","badgeGenerated":false,"vipLogoUrl":null,"createdAt":"2025-09-04 17:56:52","updatedAt":"2025-09-28 16:13:37","isWalkIn":"0","ticketPrice":0,"jobTitle":null,"company":null,"invitation_status":"pending","last_invitation_sent_at":null,"source":"eventbrite"},{"id":"walkin-1757004495-7306","eventId":"evt_68b808ae52e514.67564750","eventbriteId":null,"firstName":"Roni","lastName":"Noueihed","email":"roni.noueihed@gmail.com","ticketType":"Walk-in","isVip":false,"isCheckedIn":true,"checkedInAt":"2025-09-24 10:52:08","qrCode":"WALKIN-walkin-1757004495-7306","badgeGenerated":false,"vipLogoUrl":null,"createdAt":"2025-09-04 16:48:01","updatedAt":"2025-09-24 10:52:08","isWalkIn":"0","ticketPrice":0,"jobTitle":null,"company":null,"invitation_status":"pending","last_invitation_sent_at":null,"source":"eventbrite"},{"id":"walkin-1757004568-1223","eventId":"evt_68b808ae52e514.67564750","eventbriteId":null,"firstName":"Nicole","lastName":"Howard","email":"nh0039@uah.edu","ticketType":"Walk-in","isVip":false,"isCheckedIn":false,"checkedInAt":"2025-09-04 17:38:09","qrCode":"WALKIN-walkin-1757004568-1223","badgeGenerated":false,"vipLogoUrl":null,"createdAt":"2025-09-04 16:48:44","updatedAt":"2025-09-04 17:38:37","isWalkIn":"0","ticketPrice":0,"jobTitle":null,"company":null,"invitation_status":"pending","last_invitation_sent_at":null,"source":"eventbrite"},{"id":"ATT-68b809359fe4b","eventId":"evt_68b808ae52e514.67564750","eventbriteId":"21629882223","firstName":"Rachid","lastName":"Ouedraogo","email":"rouedraogo14@gmail.com","ticketType":"General Admission","isVip":false,"isCheckedIn":true,"checkedInAt":"2025-09-04 22:25:32","qrCode":"ATT-68b809359fe4b","badgeGenerated":false,"vipLogoUrl":null,"createdAt":"2025-09-03 09:24:05","updatedAt":"2025-09-04 22:25:32","isWalkIn":"0","ticketPrice":0,"jobTitle":null,"company":null,"invitation_status":"pending","last_invitation_sent_at":null,"source":"eventbrite"},{"id":"ATT-68b8093404916","eventId":"evt_68b808ae52e514.67564750","eventbriteId":"21624800653","firstName":"Brayden","lastName":"Nelson","email":"braydennelson12@gmail.com","ticketType":"General Admission","isVip":false,"isCheckedIn":true,"checkedInAt":"2025-09-04 21:51:05","qrCode":"ATT-68b8093404916","badgeGenerated":false,"vipLogoUrl":null,"createdAt":"2025-09-03 09:24:04","updatedAt":"2025-09-04 21:51:05","isWalkIn":"0","ticketPrice":0,"jobTitle":null,"company":null,"invitation_status":"pending","last_invitation_sent_at":null,"source":"eventbrite"},{"id":"AT
+js_primitives.dart:28 🌐 HTTP: Decoded response type: List<dynamic>
+js_primitives.dart:28 🔍 CHECK-IN HUB: Badge provider state:
+js_primitives.dart:28   - Templates loaded: 7
+js_primitives.dart:28   - Event cached: none
+js_primitives.dart:28 🔍 SEARCH SCREEN: Templates already loaded globally: 7
+js_primitives.dart:28 🔍 SEARCH SCREEN: Using globally loaded templates: 7
+js_primitives.dart:28 🔍 SEARCH SCREEN: Starting badge print for gelayol mohammadnazar (VIP: false)
+js_primitives.dart:28 🔍 BADGE PROVIDER: Starting template selection for attendee: gelayol mohammadnazar
+js_primitives.dart:28 🔍 BADGE PROVIDER: Attendee event ID: evt_68b808ae52e514.67564750
+js_primitives.dart:28 🔍 BADGE PROVIDER: Attendee VIP status: false
+js_primitives.dart:28 🔍 BADGE PROVIDER: Available templates count: 7
+js_primitives.dart:28 🔍 BADGE PROVIDER: Fetching event details for: evt_68b808ae52e514.67564750
+js_primitives.dart:28 ✅ BADGE PROVIDER: Using cached event data
+js_primitives.dart:28 ✅ BADGE PROVIDER: Event found: LLM Mechanics: Decode AI Models. Get Results That Matter.
+js_primitives.dart:28 🔍 BADGE PROVIDER: Event regular template ID: "template-68b12d7e1ae67"
+js_primitives.dart:28 🔍 BADGE PROVIDER: Event VIP template ID: "template-68b5e55928d62"
+js_primitives.dart:28 🔍 BADGE PROVIDER: Event regular template ID is null: false
+js_primitives.dart:28 🔍 BADGE PROVIDER: Event VIP template ID is null: false
+js_primitives.dart:28 🔍 BADGE PROVIDER: Selecting template for regular attendee: gelayol mohammadnazar
+js_primitives.dart:28 🔍 BADGE PROVIDER: Looking for template ID: template-68b12d7e1ae67
+js_primitives.dart:28 🔍 BADGE PROVIDER: Searching for template ID: "template-68b12d7e1ae67"
+js_primitives.dart:28 🔍 BADGE PROVIDER: Available template IDs: "template-68d415ad84d0e", "template-68b5e55928d62", "template-68b1349163626", "template-68b12d7e1ae67", "template-68b1296299637", "template-68af51d06a035", "template-68af50659ae13"
+js_primitives.dart:28 🔍 BADGE PROVIDER: Template search details:
+js_primitives.dart:28   Template 0: "Background  Template" (ID: "template-68d415ad84d0e", VIP: false)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 100, 52, 49, 53, 97, 100, 56, 52, 100, 48, 101], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28   Template 1: "VIP Template" (ID: "template-68b5e55928d62", VIP: true)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 53, 101, 53, 53, 57, 50, 56, 100, 54, 50], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28   Template 2: "Background 2.4 Template" (ID: "template-68b1349163626", VIP: false)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 51, 52, 57, 49, 54, 51, 54, 50, 54], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28   Template 3: "test with background Template" (ID: "template-68b12d7e1ae67", VIP: false)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55]
+js_primitives.dart:28     - Exact match: true
+js_primitives.dart:28   Template 4: "Test label 08-28 Template" (ID: "template-68b1296299637", VIP: false)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 57, 54, 50, 57, 57, 54, 51, 55], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28   Template 5: "Brother QL - 820NWB Template (Copy)" (ID: "template-68af51d06a035", VIP: true)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 97, 102, 53, 49, 100, 48, 54, 97, 48, 51, 53], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28   Template 6: "Brother QL - 820NWB Template" (ID: "template-68af50659ae13", VIP: false)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 97, 102, 53, 48, 54, 53, 57, 97, 101, 49, 51], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28 ✅ BADGE PROVIDER: Selected regular template: test with background Template
+js_primitives.dart:28 ✅ BADGE PROVIDER: Template has 1 fields
+js_primitives.dart:28 ✅ BADGE PROVIDER: Template dimensions: {width: 3.5, height: 2.44}
+js_primitives.dart:28 ✅ BADGE PROVIDER: Template background: uploads/badge-images/badge_68e5566432f97_1759860324.png
+js_primitives.dart:28 🎨 BADGE GENERATION: Template "test with background Template" (template-68b12d7e1ae67)
+js_primitives.dart:28 📏 Dimensions: 3.5x2.44 in
+js_primitives.dart:28 🖼️ Background: uploads/badge-images/badge_68e5566432f97_1759860324.png
+js_primitives.dart:28 📋 Fields: 1
+js_primitives.dart:28 📌 Field 1756442113214: text
+js_primitives.dart:28    Content: "{firstName}
+{lastName}"
+js_primitives.dart:28    Position: (80, 100)
+js_primitives.dart:28    Size: 200 x 40
+js_primitives.dart:28 🔍 FIELD CONTENT: Original: "{firstName}
+{lastName}"
+js_primitives.dart:28 🔍 FIELD CONTENT: Resolved: "gelayol
+mohammadnazar"
+js_primitives.dart:28    ✏️ Resolved: "gelayol
+mohammadnazar"
+js_primitives.dart:28 🔍 BADGE PRINTING: Raw dimensions: 3.5x2.44 units: in
+js_primitives.dart:28 🔍 BADGE PRINTING: Template pixel dimensions: 336px x 234.24px
+js_primitives.dart:28 🔍 BADGE PRINTING: Canvas display scale: 1 (scaleX: 1.4880952380952381, scaleY: 2.5614754098360653)
+js_primitives.dart:28 🔍 BADGE PRINTING: Max display: 500px x 600px
+js_primitives.dart:28 🔍 BADGE PRINTING: Converted dimensions: 88.89999999999999mm x 61.97599999999999mm
+js_primitives.dart:28 🖼️ Loading background image: uploads/badge-images/badge_68e5566432f97_1759860324.png
+js_primitives.dart:28 🖼️ Downloading image from: https://lightslategray-donkey-866736.hostingersite.com/uploads/badge-images/badge_68e5566432f97_1759860324.png
+js_primitives.dart:28 🖼️ Image downloaded successfully via proxy (18940 bytes)
+js_primitives.dart:28 🖼️ Background image loaded successfully
+js_primitives.dart:28 🏷️ Loading logo image: uploads/badge-images/badge_68e5566432f97_1759860324.png
+js_primitives.dart:28 🖼️ Downloading image from: https://lightslategray-donkey-866736.hostingersite.com/uploads/badge-images/badge_68e5566432f97_1759860324.png
+js_primitives.dart:28 🖼️ Image downloaded successfully via proxy (18940 bytes)
+js_primitives.dart:28 🏷️ Logo image loaded successfully
+js_primitives.dart:28 🔍 BADGE PRINTING: PDF page size: 88.89999999999999mm x 61.97599999999999mm (exact badge size)
+js_primitives.dart:28 🔍 BADGE PRINTING: Badge positioned at: (0mm, 0mm) - fills entire page
+js_primitives.dart:28 🔍 BADGE PRINTING: Building badge for gelayol mohammadnazar
+js_primitives.dart:28 🔍 BADGE PRINTING: Template "test with background Template" has 1 fields
+js_primitives.dart:28 🔍 BADGE PRINTING: Badge dimensions: 88.89999999999999mm x 61.97599999999999mm
+js_primitives.dart:28 🔍 BADGE PRINTING: Background color: #ffffff
+js_primitives.dart:28 🔍 BADGE PRINTING: Background image: loaded
+js_primitives.dart:28 🔍 BADGE PRINTING: Logo image: loaded
+js_primitives.dart:28 🔍 BADGE PRINTING: Template pixel dimensions: 336px x 234.24px
+js_primitives.dart:28 🔍 BADGE PRINTING: Canvas display scale: 1
+js_primitives.dart:28 🔍 BADGE PRINTING: Field 0: text "{firstName}
+{lastName}" at (80, 100) size (200, 40)
+js_primitives.dart:28 🔍 BADGE PRINTING: Field text - Original: (80, 100) size (200, 40)
+js_primitives.dart:28 🔍 BADGE PRINTING: Field text - Scaled: (80, 100) size (200, 40)
+js_primitives.dart:28 🔍 BADGE PRINTING: Field text - Final PDF: (21.166666666666664, 26.45833333333333) size (52.916666666666664, 10.583333333333332) mm
+js_primitives.dart:28 🔍 FIELD WIDGET: Building text field "1756442113214"
+js_primitives.dart:28 🔍 FIELD CONTENT: Original: "{firstName}
+{lastName}"
+js_primitives.dart:28 🔍 FIELD CONTENT: Resolved: "gelayol
+mohammadnazar"
+js_primitives.dart:28 🔍 FIELD WIDGET: Text field content: "gelayol
+mohammadnazar"
+js_primitives.dart:28 🔍 FIELD CONTENT: Original: "{firstName}
+{lastName}"
+js_primitives.dart:28 🔍 FIELD CONTENT: Resolved: "gelayol
+mohammadnazar"
+js_primitives.dart:28 ✅ FONT: Loaded Roboto font for Unicode support
+js_primitives.dart:28 🔍 FONT SCALING: Field "1756442113214" - Base: 26px, Scale: 1, Final: 26.0px
+js_primitives.dart:28 🔍 MULTILINE TEXT: Detected newlines in content, splitting into lines
+js_primitives.dart:28 Badge generated for attendee: walkin-1757025119-9478
+js_primitives.dart:28 🔍 SEARCH SCREEN: Using globally loaded templates: 7
+js_primitives.dart:28 🔍 SEARCH SCREEN: Starting badge print for gelayol mohammadnazar (VIP: false)
+js_primitives.dart:28 🔍 BADGE PROVIDER: Starting template selection for attendee: gelayol mohammadnazar
+js_primitives.dart:28 🔍 BADGE PROVIDER: Attendee event ID: evt_68b808ae52e514.67564750
+js_primitives.dart:28 🔍 BADGE PROVIDER: Attendee VIP status: false
+js_primitives.dart:28 🔍 BADGE PROVIDER: Available templates count: 7
+js_primitives.dart:28 🔍 BADGE PROVIDER: Fetching event details for: evt_68b808ae52e514.67564750
+js_primitives.dart:28 ✅ BADGE PROVIDER: Using cached event data
+js_primitives.dart:28 ✅ BADGE PROVIDER: Event found: LLM Mechanics: Decode AI Models. Get Results That Matter.
+js_primitives.dart:28 🔍 BADGE PROVIDER: Event regular template ID: "template-68b12d7e1ae67"
+js_primitives.dart:28 🔍 BADGE PROVIDER: Event VIP template ID: "template-68b5e55928d62"
+js_primitives.dart:28 🔍 BADGE PROVIDER: Event regular template ID is null: false
+js_primitives.dart:28 🔍 BADGE PROVIDER: Event VIP template ID is null: false
+js_primitives.dart:28 🔍 BADGE PROVIDER: Selecting template for regular attendee: gelayol mohammadnazar
+js_primitives.dart:28 🔍 BADGE PROVIDER: Looking for template ID: template-68b12d7e1ae67
+js_primitives.dart:28 🔍 BADGE PROVIDER: Searching for template ID: "template-68b12d7e1ae67"
+js_primitives.dart:28 🔍 BADGE PROVIDER: Available template IDs: "template-68d415ad84d0e", "template-68b5e55928d62", "template-68b1349163626", "template-68b12d7e1ae67", "template-68b1296299637", "template-68af51d06a035", "template-68af50659ae13"
+js_primitives.dart:28 🔍 BADGE PROVIDER: Template search details:
+js_primitives.dart:28   Template 0: "Background  Template" (ID: "template-68d415ad84d0e", VIP: false)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 100, 52, 49, 53, 97, 100, 56, 52, 100, 48, 101], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28   Template 1: "VIP Template" (ID: "template-68b5e55928d62", VIP: true)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 53, 101, 53, 53, 57, 50, 56, 100, 54, 50], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28   Template 2: "Background 2.4 Template" (ID: "template-68b1349163626", VIP: false)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 51, 52, 57, 49, 54, 51, 54, 50, 54], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28   Template 3: "test with background Template" (ID: "template-68b12d7e1ae67", VIP: false)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55]
+js_primitives.dart:28     - Exact match: true
+js_primitives.dart:28   Template 4: "Test label 08-28 Template" (ID: "template-68b1296299637", VIP: false)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 57, 54, 50, 57, 57, 54, 51, 55], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28   Template 5: "Brother QL - 820NWB Template (Copy)" (ID: "template-68af51d06a035", VIP: true)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 97, 102, 53, 49, 100, 48, 54, 97, 48, 51, 53], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28   Template 6: "Brother QL - 820NWB Template" (ID: "template-68af50659ae13", VIP: false)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 97, 102, 53, 48, 54, 53, 57, 97, 101, 49, 51], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28 ✅ BADGE PROVIDER: Selected regular template: test with background Template
+js_primitives.dart:28 ✅ BADGE PROVIDER: Template has 1 fields
+js_primitives.dart:28 ✅ BADGE PROVIDER: Template dimensions: {width: 3.5, height: 2.44}
+js_primitives.dart:28 ✅ BADGE PROVIDER: Template background: uploads/badge-images/badge_68e5566432f97_1759860324.png
+js_primitives.dart:28 🎨 BADGE GENERATION: Template "test with background Template" (template-68b12d7e1ae67)
+js_primitives.dart:28 📏 Dimensions: 3.5x2.44 in
+js_primitives.dart:28 🖼️ Background: uploads/badge-images/badge_68e5566432f97_1759860324.png
+js_primitives.dart:28 📋 Fields: 1
+js_primitives.dart:28 📌 Field 1756442113214: text
+js_primitives.dart:28    Content: "{firstName}
+{lastName}"
+js_primitives.dart:28    Position: (80, 100)
+js_primitives.dart:28    Size: 200 x 40
+js_primitives.dart:28 🔍 FIELD CONTENT: Original: "{firstName}
+{lastName}"
+js_primitives.dart:28 🔍 FIELD CONTENT: Resolved: "gelayol
+mohammadnazar"
+js_primitives.dart:28    ✏️ Resolved: "gelayol
+mohammadnazar"
+js_primitives.dart:28 🔍 BADGE PRINTING: Raw dimensions: 3.5x2.44 units: in
+js_primitives.dart:28 🔍 BADGE PRINTING: Template pixel dimensions: 336px x 234.24px
+js_primitives.dart:28 🔍 BADGE PRINTING: Canvas display scale: 1 (scaleX: 1.4880952380952381, scaleY: 2.5614754098360653)
+js_primitives.dart:28 🔍 BADGE PRINTING: Max display: 500px x 600px
+js_primitives.dart:28 🔍 BADGE PRINTING: Converted dimensions: 88.89999999999999mm x 61.97599999999999mm
+js_primitives.dart:28 🖼️ Loading background image: uploads/badge-images/badge_68e5566432f97_1759860324.png
+js_primitives.dart:28 🖼️ Downloading image from: https://lightslategray-donkey-866736.hostingersite.com/uploads/badge-images/badge_68e5566432f97_1759860324.png
+js_primitives.dart:28 🖼️ Image downloaded successfully via proxy (18940 bytes)
+js_primitives.dart:28 🖼️ Background image loaded successfully
+js_primitives.dart:28 🏷️ Loading logo image: uploads/badge-images/badge_68e5566432f97_1759860324.png
+js_primitives.dart:28 🖼️ Downloading image from: https://lightslategray-donkey-866736.hostingersite.com/uploads/badge-images/badge_68e5566432f97_1759860324.png
+js_primitives.dart:28 🖼️ Image downloaded successfully via proxy (18940 bytes)
+js_primitives.dart:28 🏷️ Logo image loaded successfully
+js_primitives.dart:28 🔍 BADGE PRINTING: PDF page size: 88.89999999999999mm x 61.97599999999999mm (exact badge size)
+js_primitives.dart:28 🔍 BADGE PRINTING: Badge positioned at: (0mm, 0mm) - fills entire page
+js_primitives.dart:28 🔍 BADGE PRINTING: Building badge for gelayol mohammadnazar
+js_primitives.dart:28 🔍 BADGE PRINTING: Template "test with background Template" has 1 fields
+js_primitives.dart:28 🔍 BADGE PRINTING: Badge dimensions: 88.89999999999999mm x 61.97599999999999mm
+js_primitives.dart:28 🔍 BADGE PRINTING: Background color: #ffffff
+js_primitives.dart:28 🔍 BADGE PRINTING: Background image: loaded
+js_primitives.dart:28 🔍 BADGE PRINTING: Logo image: loaded
+js_primitives.dart:28 🔍 BADGE PRINTING: Template pixel dimensions: 336px x 234.24px
+js_primitives.dart:28 🔍 BADGE PRINTING: Canvas display scale: 1
+js_primitives.dart:28 🔍 BADGE PRINTING: Field 0: text "{firstName}
+{lastName}" at (80, 100) size (200, 40)
+js_primitives.dart:28 🔍 BADGE PRINTING: Field text - Original: (80, 100) size (200, 40)
+js_primitives.dart:28 🔍 BADGE PRINTING: Field text - Scaled: (80, 100) size (200, 40)
+js_primitives.dart:28 🔍 BADGE PRINTING: Field text - Final PDF: (21.166666666666664, 26.45833333333333) size (52.916666666666664, 10.583333333333332) mm
+js_primitives.dart:28 🔍 FIELD WIDGET: Building text field "1756442113214"
+js_primitives.dart:28 🔍 FIELD CONTENT: Original: "{firstName}
+{lastName}"
+js_primitives.dart:28 🔍 FIELD CONTENT: Resolved: "gelayol
+mohammadnazar"
+js_primitives.dart:28 🔍 FIELD WIDGET: Text field content: "gelayol
+mohammadnazar"
+js_primitives.dart:28 🔍 FIELD CONTENT: Original: "{firstName}
+{lastName}"
+js_primitives.dart:28 🔍 FIELD CONTENT: Resolved: "gelayol
+mohammadnazar"
+js_primitives.dart:28 🔍 FONT SCALING: Field "1756442113214" - Base: 26px, Scale: 1, Final: 26.0px
+js_primitives.dart:28 🔍 MULTILINE TEXT: Detected newlines in content, splitting into lines
+js_primitives.dart:28 Badge generated for attendee: walkin-1757025119-9478
+js_primitives.dart:28 🔍 SEARCH SCREEN: Using globally loaded templates: 7
+js_primitives.dart:28 🔍 SEARCH SCREEN: Starting badge print for Alex Mhanna (VIP: true)
+js_primitives.dart:28 🔍 BADGE PROVIDER: Starting template selection for attendee: Alex Mhanna
+js_primitives.dart:28 🔍 BADGE PROVIDER: Attendee event ID: evt_68b808ae52e514.67564750
+js_primitives.dart:28 🔍 BADGE PROVIDER: Attendee VIP status: true
+js_primitives.dart:28 🔍 BADGE PROVIDER: Available templates count: 7
+js_primitives.dart:28 🔍 BADGE PROVIDER: Fetching event details for: evt_68b808ae52e514.67564750
+js_primitives.dart:28 ✅ BADGE PROVIDER: Using cached event data
+js_primitives.dart:28 ✅ BADGE PROVIDER: Event found: LLM Mechanics: Decode AI Models. Get Results That Matter.
+js_primitives.dart:28 🔍 BADGE PROVIDER: Event regular template ID: "template-68b12d7e1ae67"
+js_primitives.dart:28 🔍 BADGE PROVIDER: Event VIP template ID: "template-68b5e55928d62"
+js_primitives.dart:28 🔍 BADGE PROVIDER: Event regular template ID is null: false
+js_primitives.dart:28 🔍 BADGE PROVIDER: Event VIP template ID is null: false
+js_primitives.dart:28 🔍 BADGE PROVIDER: Selecting template for VIP attendee: Alex Mhanna
+js_primitives.dart:28 🔍 BADGE PROVIDER: Looking for template ID: template-68b5e55928d62
+js_primitives.dart:28 🔍 BADGE PROVIDER: Searching for template ID: "template-68b5e55928d62"
+js_primitives.dart:28 🔍 BADGE PROVIDER: Available template IDs: "template-68d415ad84d0e", "template-68b5e55928d62", "template-68b1349163626", "template-68b12d7e1ae67", "template-68b1296299637", "template-68af51d06a035", "template-68af50659ae13"
+js_primitives.dart:28 🔍 BADGE PROVIDER: Template search details:
+js_primitives.dart:28   Template 0: "Background  Template" (ID: "template-68d415ad84d0e", VIP: false)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 100, 52, 49, 53, 97, 100, 56, 52, 100, 48, 101], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 53, 101, 53, 53, 57, 50, 56, 100, 54, 50]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28   Template 1: "VIP Template" (ID: "template-68b5e55928d62", VIP: true)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 53, 101, 53, 53, 57, 50, 56, 100, 54, 50], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 53, 101, 53, 53, 57, 50, 56, 100, 54, 50]
+js_primitives.dart:28     - Exact match: true
+js_primitives.dart:28   Template 2: "Background 2.4 Template" (ID: "template-68b1349163626", VIP: false)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 51, 52, 57, 49, 54, 51, 54, 50, 54], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 53, 101, 53, 53, 57, 50, 56, 100, 54, 50]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28   Template 3: "test with background Template" (ID: "template-68b12d7e1ae67", VIP: false)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 53, 101, 53, 53, 57, 50, 56, 100, 54, 50]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28   Template 4: "Test label 08-28 Template" (ID: "template-68b1296299637", VIP: false)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 57, 54, 50, 57, 57, 54, 51, 55], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 53, 101, 53, 53, 57, 50, 56, 100, 54, 50]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28   Template 5: "Brother QL - 820NWB Template (Copy)" (ID: "template-68af51d06a035", VIP: true)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 97, 102, 53, 49, 100, 48, 54, 97, 48, 51, 53], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 53, 101, 53, 53, 57, 50, 56, 100, 54, 50]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28   Template 6: "Brother QL - 820NWB Template" (ID: "template-68af50659ae13", VIP: false)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 97, 102, 53, 48, 54, 53, 57, 97, 101, 49, 51], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 53, 101, 53, 53, 57, 50, 56, 100, 54, 50]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28 ✅ BADGE PROVIDER: Selected VIP template: VIP Template
+js_primitives.dart:28 ✅ BADGE PROVIDER: Template has 2 fields
+js_primitives.dart:28 ✅ BADGE PROVIDER: Template dimensions: {width: 3.5, height: 2.44}
+js_primitives.dart:28 ✅ BADGE PROVIDER: Template background: uploads/badge-images/badge_68e556a27c596_1759860386.png
+js_primitives.dart:28 🎨 BADGE GENERATION: Template "VIP Template" (template-68b5e55928d62)
+js_primitives.dart:28 📏 Dimensions: 3.5x2.44 in
+js_primitives.dart:28 🖼️ Background: uploads/badge-images/badge_68e556a27c596_1759860386.png
+js_primitives.dart:28 📋 Fields: 2
+js_primitives.dart:28 📌 Field 1756751109787: text
+js_primitives.dart:28    Content: "{firstName}
+{lastName}"
+js_primitives.dart:28    Position: (70, 110)
+js_primitives.dart:28    Size: 200 x 40
+js_primitives.dart:28 🔍 FIELD CONTENT: Original: "{firstName}
+{lastName}"
+js_primitives.dart:28 🔍 FIELD CONTENT: Resolved: "Alex
+Mhanna"
+js_primitives.dart:28    ✏️ Resolved: "Alex
+Mhanna"
+js_primitives.dart:28 📌 Field 1756751679504: logo
+js_primitives.dart:28    Content: ""
+js_primitives.dart:28    Position: (130, 60)
+js_primitives.dart:28    Size: 80 x 50
+js_primitives.dart:28 🔍 BADGE PRINTING: Raw dimensions: 3.5x2.44 units: in
+js_primitives.dart:28 🔍 BADGE PRINTING: Template pixel dimensions: 336px x 234.24px
+js_primitives.dart:28 🔍 BADGE PRINTING: Canvas display scale: 1 (scaleX: 1.4880952380952381, scaleY: 2.5614754098360653)
+js_primitives.dart:28 🔍 BADGE PRINTING: Max display: 500px x 600px
+js_primitives.dart:28 🔍 BADGE PRINTING: Converted dimensions: 88.89999999999999mm x 61.97599999999999mm
+js_primitives.dart:28 🖼️ Loading background image: uploads/badge-images/badge_68e556a27c596_1759860386.png
+js_primitives.dart:28 🖼️ Downloading image from: https://lightslategray-donkey-866736.hostingersite.com/uploads/badge-images/badge_68e556a27c596_1759860386.png
+js_primitives.dart:28 🖼️ Image downloaded successfully via proxy (18940 bytes)
+js_primitives.dart:28 🖼️ Background image loaded successfully
+js_primitives.dart:28 🏷️ Loading logo image: uploads/badge-images/badge_68e556a27c596_1759860386.png
+js_primitives.dart:28 🖼️ Downloading image from: https://lightslategray-donkey-866736.hostingersite.com/uploads/badge-images/badge_68e556a27c596_1759860386.png
+js_primitives.dart:28 🖼️ Image downloaded successfully via proxy (18940 bytes)
+js_primitives.dart:28 🏷️ Logo image loaded successfully
+js_primitives.dart:28 🔍 BADGE PRINTING: PDF page size: 88.89999999999999mm x 61.97599999999999mm (exact badge size)
+js_primitives.dart:28 🔍 BADGE PRINTING: Badge positioned at: (0mm, 0mm) - fills entire page
+js_primitives.dart:28 🔍 BADGE PRINTING: Building badge for Alex Mhanna
+js_primitives.dart:28 🔍 BADGE PRINTING: Template "VIP Template" has 2 fields
+js_primitives.dart:28 🔍 BADGE PRINTING: Badge dimensions: 88.89999999999999mm x 61.97599999999999mm
+js_primitives.dart:28 🔍 BADGE PRINTING: Background color: #ffffff
+js_primitives.dart:28 🔍 BADGE PRINTING: Background image: loaded
+js_primitives.dart:28 🔍 BADGE PRINTING: Logo image: loaded
+js_primitives.dart:28 🔍 BADGE PRINTING: Template pixel dimensions: 336px x 234.24px
+js_primitives.dart:28 🔍 BADGE PRINTING: Canvas display scale: 1
+js_primitives.dart:28 🔍 BADGE PRINTING: Field 0: text "{firstName}
+{lastName}" at (70, 110) size (200, 40)
+js_primitives.dart:28 🔍 BADGE PRINTING: Field 1: logo "" at (130, 60) size (80, 50)
+js_primitives.dart:28 🔍 BADGE PRINTING: Field text - Original: (70, 110) size (200, 40)
+js_primitives.dart:28 🔍 BADGE PRINTING: Field text - Scaled: (70, 110) size (200, 40)
+js_primitives.dart:28 🔍 BADGE PRINTING: Field text - Final PDF: (18.520833333333332, 29.104166666666664) size (52.916666666666664, 10.583333333333332) mm
+js_primitives.dart:28 🔍 FIELD WIDGET: Building text field "1756751109787"
+js_primitives.dart:28 🔍 FIELD CONTENT: Original: "{firstName}
+{lastName}"
+js_primitives.dart:28 🔍 FIELD CONTENT: Resolved: "Alex
+Mhanna"
+js_primitives.dart:28 🔍 FIELD WIDGET: Text field content: "Alex
+Mhanna"
+js_primitives.dart:28 🔍 FIELD CONTENT: Original: "{firstName}
+{lastName}"
+js_primitives.dart:28 🔍 FIELD CONTENT: Resolved: "Alex
+Mhanna"
+js_primitives.dart:28 🔍 BADGE PRINTING: Field logo - Original: (130, 60) size (80, 50)
+js_primitives.dart:28 🔍 BADGE PRINTING: Field logo - Scaled: (130, 60) size (80, 50)
+js_primitives.dart:28 🔍 BADGE PRINTING: Field logo - Final PDF: (34.39583333333333, 15.874999999999996) size (21.166666666666664, 13.229166666666664) mm
+js_primitives.dart:28 🔍 FIELD WIDGET: Building logo field "1756751679504"
+js_primitives.dart:28 🔍 FIELD WIDGET: Logo field, logo available: true
+js_primitives.dart:28 🔍 FONT SCALING: Field "1756751109787" - Base: 20px, Scale: 1, Final: 20.0px
+js_primitives.dart:28 🔍 MULTILINE TEXT: Detected newlines in content, splitting into lines
+js_primitives.dart:28 Badge generated for attendee: walkin-1757009152-7220
+js_primitives.dart:28 🔍 SEARCH SCREEN: Using globally loaded templates: 7
+js_primitives.dart:28 🔍 SEARCH SCREEN: Starting badge print for Alex Mhanna (VIP: true)
+js_primitives.dart:28 🔍 SEARCH SCREEN: Using globally loaded templates: 7
+js_primitives.dart:28 🔍 SEARCH SCREEN: Starting badge print for Rishi Parikh (VIP: false)
+js_primitives.dart:28 🔍 BADGE PROVIDER: Starting template selection for attendee: Rishi Parikh
+js_primitives.dart:28 🔍 BADGE PROVIDER: Attendee event ID: evt_68b808ae52e514.67564750
+js_primitives.dart:28 🔍 BADGE PROVIDER: Attendee VIP status: false
+js_primitives.dart:28 🔍 BADGE PROVIDER: Available templates count: 7
+js_primitives.dart:28 🔍 BADGE PROVIDER: Fetching event details for: evt_68b808ae52e514.67564750
+js_primitives.dart:28 ✅ BADGE PROVIDER: Using cached event data
+js_primitives.dart:28 ✅ BADGE PROVIDER: Event found: LLM Mechanics: Decode AI Models. Get Results That Matter.
+js_primitives.dart:28 🔍 BADGE PROVIDER: Event regular template ID: "template-68b12d7e1ae67"
+js_primitives.dart:28 🔍 BADGE PROVIDER: Event VIP template ID: "template-68b5e55928d62"
+js_primitives.dart:28 🔍 BADGE PROVIDER: Event regular template ID is null: false
+js_primitives.dart:28 🔍 BADGE PROVIDER: Event VIP template ID is null: false
+js_primitives.dart:28 🔍 BADGE PROVIDER: Selecting template for regular attendee: Rishi Parikh
+js_primitives.dart:28 🔍 BADGE PROVIDER: Looking for template ID: template-68b12d7e1ae67
+js_primitives.dart:28 🔍 BADGE PROVIDER: Searching for template ID: "template-68b12d7e1ae67"
+js_primitives.dart:28 🔍 BADGE PROVIDER: Available template IDs: "template-68d415ad84d0e", "template-68b5e55928d62", "template-68b1349163626", "template-68b12d7e1ae67", "template-68b1296299637", "template-68af51d06a035", "template-68af50659ae13"
+js_primitives.dart:28 🔍 BADGE PROVIDER: Template search details:
+js_primitives.dart:28   Template 0: "Background  Template" (ID: "template-68d415ad84d0e", VIP: false)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 100, 52, 49, 53, 97, 100, 56, 52, 100, 48, 101], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28   Template 1: "VIP Template" (ID: "template-68b5e55928d62", VIP: true)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 53, 101, 53, 53, 57, 50, 56, 100, 54, 50], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28   Template 2: "Background 2.4 Template" (ID: "template-68b1349163626", VIP: false)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 51, 52, 57, 49, 54, 51, 54, 50, 54], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28   Template 3: "test with background Template" (ID: "template-68b12d7e1ae67", VIP: false)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55]
+js_primitives.dart:28     - Exact match: true
+js_primitives.dart:28   Template 4: "Test label 08-28 Template" (ID: "template-68b1296299637", VIP: false)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 57, 54, 50, 57, 57, 54, 51, 55], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28   Template 5: "Brother QL - 820NWB Template (Copy)" (ID: "template-68af51d06a035", VIP: true)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 97, 102, 53, 49, 100, 48, 54, 97, 48, 51, 53], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28   Template 6: "Brother QL - 820NWB Template" (ID: "template-68af50659ae13", VIP: false)
+js_primitives.dart:28     - ID length: 22, Target length: 22
+js_primitives.dart:28     - ID bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 97, 102, 53, 48, 54, 53, 57, 97, 101, 49, 51], Target bytes: [116, 101, 109, 112, 108, 97, 116, 101, 45, 54, 56, 98, 49, 50, 100, 55, 101, 49, 97, 101, 54, 55]
+js_primitives.dart:28     - Exact match: false
+js_primitives.dart:28 ✅ BADGE PROVIDER: Selected regular template: test with background Template
+js_primitives.dart:28 ✅ BADGE PROVIDER: Template has 1 fields
+js_primitives.dart:28 ✅ BADGE PROVIDER: Template dimensions: {width: 3.5, height: 2.44}
+js_primitives.dart:28 ✅ BADGE PROVIDER: Template background: uploads/badge-images/badge_68e5566432f97_1759860324.png
+js_primitives.dart:28 🎨 BADGE GENERATION: Template "test with background Template" (template-68b12d7e1ae67)
+js_primitives.dart:28 📏 Dimensions: 3.5x2.44 in
+js_primitives.dart:28 🖼️ Background: uploads/badge-images/badge_68e5566432f97_1759860324.png
+js_primitives.dart:28 📋 Fields: 1
+js_primitives.dart:28 📌 Field 1756442113214: text
+js_primitives.dart:28    Content: "{firstName}
+{lastName}"
+js_primitives.dart:28    Position: (80, 100)
+js_primitives.dart:28    Size: 200 x 40
+js_primitives.dart:28 🔍 FIELD CONTENT: Original: "{firstName}
+{lastName}"
+js_primitives.dart:28 🔍 FIELD CONTENT: Resolved: "Rishi
+Parikh"
+js_primitives.dart:28    ✏️ Resolved: "Rishi
+Parikh"
+js_primitives.dart:28 🔍 BADGE PRINTING: Raw dimensions: 3.5x2.44 units: in
+js_primitives.dart:28 🔍 BADGE PRINTING: Template pixel dimensions: 336px x 234.24px
+js_primitives.dart:28 🔍 BADGE PRINTING: Canvas display scale: 1 (scaleX: 1.4880952380952381, scaleY: 2.5614754098360653)
+js_primitives.dart:28 🔍 BADGE PRINTING: Max display: 500px x 600px
+js_primitives.dart:28 🔍 BADGE PRINTING: Converted dimensions: 88.89999999999999mm x 61.97599999999999mm
+js_primitives.dart:28 🖼️ Loading background image: uploads/badge-images/badge_68e5566432f97_1759860324.png
+js_primitives.dart:28 🖼️ Downloading image from: https://lightslategray-donkey-866736.hostingersite.com/uploads/badge-images/badge_68e5566432f97_1759860324.png
+js_primitives.dart:28 🖼️ Image downloaded successfully via proxy (18940 bytes)
+js_primitives.dart:28 🖼️ Background image loaded successfully
+js_primitives.dart:28 🏷️ Loading logo image: uploads/badge-images/badge_68e5566432f97_1759860324.png
+js_primitives.dart:28 🖼️ Downloading image from: https://lightslategray-donkey-866736.hostingersite.com/uploads/badge-images/badge_68e5566432f97_1759860324.png
+js_primitives.dart:28 🖼️ Image downloaded successfully via proxy (18940 bytes)
+js_primitives.dart:28 🏷️ Logo image loaded successfully
+js_primitives.dart:28 🔍 BADGE PRINTING: PDF page size: 88.89999999999999mm x 61.97599999999999mm (exact badge size)
+js_primitives.dart:28 🔍 BADGE PRINTING: Badge positioned at: (0mm, 0mm) - fills entire page
+js_primitives.dart:28 🔍 BADGE PRINTING: Building badge for Rishi Parikh
+js_primitives.dart:28 🔍 BADGE PRINTING: Template "test with background Template" has 1 fields
+js_primitives.dart:28 🔍 BADGE PRINTING: Badge dimensions: 88.89999999999999mm x 61.97599999999999mm
+js_primitives.dart:28 🔍 BADGE PRINTING: Background color: #ffffff
+js_primitives.dart:28 🔍 BADGE PRINTING: Background image: loaded
+js_primitives.dart:28 🔍 BADGE PRINTING: Logo image: loaded
+js_primitives.dart:28 🔍 BADGE PRINTING: Template pixel dimensions: 336px x 234.24px
+js_primitives.dart:28 🔍 BADGE PRINTING: Canvas display scale: 1
+js_primitives.dart:28 🔍 BADGE PRINTING: Field 0: text "{firstName}
+{lastName}" at (80, 100) size (200, 40)
+js_primitives.dart:28 🔍 BADGE PRINTING: Field text - Original: (80, 100) size (200, 40)
+js_primitives.dart:28 🔍 BADGE PRINTING: Field text - Scaled: (80, 100) size (200, 40)
+js_primitives.dart:28 🔍 BADGE PRINTING: Field text - Final PDF: (21.166666666666664, 26.45833333333333) size (52.916666666666664, 10.583333333333332) mm
+js_primitives.dart:28 🔍 FIELD WIDGET: Building text field "1756442113214"
+js_primitives.dart:28 🔍 FIELD CONTENT: Original: "{firstName}
+{lastName}"
+js_primitives.dart:28 🔍 FIELD CONTENT: Resolved: "Rishi
+Parikh"
+js_primitives.dart:28 🔍 FIELD WIDGET: Text field content: "Rishi
+Parikh"
+js_primitives.dart:28 🔍 FIELD CONTENT: Original: "{firstName}
+{lastName}"
+js_primitives.dart:28 🔍 FIELD CONTENT: Resolved: "Rishi
+Parikh"
+js_primitives.dart:28 🔍 FONT SCALING: Field "1756442113214" - Base: 26px, Scale: 1, Final: 26.0px
+js_primitives.dart:28 🔍 MULTILINE TEXT: Detected newlines in content, splitting into lines
+js_primitives.dart:28 Badge generated for attendee: walkin-1757025003-6467

@@ -1,0 +1,1209 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2067ACE82941A928009605D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2067ACE72941A928009605D2 /* AppDelegate.swift */; };
+		2067ACEC2941A928009605D2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2067ACEB2941A928009605D2 /* MainViewController.swift */; };
+		2067ACEF2941A928009605D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2067ACED2941A928009605D2 /* Main.storyboard */; };
+		2067ACF12941A929009605D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2067ACF02941A929009605D2 /* Assets.xcassets */; };
+		2067ACF42941A929009605D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2067ACF22941A929009605D2 /* LaunchScreen.storyboard */; };
+		2067ACFF2941A929009605D2 /* BrotherPrintSDKDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2067ACFE2941A929009605D2 /* BrotherPrintSDKDemoTests.swift */; };
+		2067AD092941A929009605D2 /* BrotherPrintSDKDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2067AD082941A929009605D2 /* BrotherPrintSDKDemoUITests.swift */; };
+		2067AD0B2941A929009605D2 /* BrotherPrintSDKDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2067AD0A2941A929009605D2 /* BrotherPrintSDKDemoUITestsLaunchTests.swift */; };
+		5101CEEE2C3697E10045220E /* FileAnalyzeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5101CEED2C3697E10045220E /* FileAnalyzeView.swift */; };
+		5101CEF12C3697FC0045220E /* FileAnalyzeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5101CEF02C3697FC0045220E /* FileAnalyzeViewController.swift */; };
+		5101CEF32C3698110045220E /* FileAnalyzeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5101CEF22C3698110045220E /* FileAnalyzeViewModel.swift */; };
+		510B90752AE63270006A6EAE /* BRLMPrinterKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2067AD262941AFEE009605D2 /* BRLMPrinterKit.xcframework */; };
+		510B90762AE63270006A6EAE /* BRLMPrinterKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2067AD262941AFEE009605D2 /* BRLMPrinterKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		516477232A258D0B0074470A /* TemplatePrintSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516477222A258D0B0074470A /* TemplatePrintSettingsView.swift */; };
+		51A795382C37C98A0006EFE6 /* EnumToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A795372C37C98A0006EFE6 /* EnumToString.swift */; };
+		D1ABD3F42A9F043F00C1E3B7 /* PrinterInfoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ABD3F32A9F043F00C1E3B7 /* PrinterInfoTest.swift */; };
+		D1C23C422BB69AAA0059835C /* GetIntListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C23C412BB69AAA0059835C /* GetIntListViewController.swift */; };
+		D1C23C482BBA8C6A0059835C /* BarButtonItemWithBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C23C472BBA8C6A0059835C /* BarButtonItemWithBlock.swift */; };
+		D1C23C4A2BBB9E780059835C /* TransitionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C23C492BBB9E780059835C /* TransitionUtils.swift */; };
+		EA1089CE2A5E94B0004F131C /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1089CD2A5E94B0004F131C /* FileUtils.swift */; };
+		EA15C9E429926500009D0B9B /* PrintSettingsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15C9E329926500009D0B9B /* PrintSettingsUtil.swift */; };
+		EA15C9E729933F3B009D0B9B /* PrinterInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15C9E629933F3B009D0B9B /* PrinterInfoViewController.swift */; };
+		EA15C9E929933F49009D0B9B /* PrinterInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15C9E829933F49009D0B9B /* PrinterInfoView.swift */; };
+		EA15C9EB29934018009D0B9B /* PrinterInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15C9EA29934018009D0B9B /* PrinterInfoViewModel.swift */; };
+		EA15C9ED29934892009D0B9B /* CommonAlertUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA15C9EC29934892009D0B9B /* CommonAlertUtil.swift */; };
+		EA18D05829A628CB007C7DB1 /* PrinterConnectUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA18D05729A628CB007C7DB1 /* PrinterConnectUtil.swift */; };
+		EA18D05A29A7559A007C7DB1 /* PrintErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA18D05929A7559A007C7DB1 /* PrintErrorModel.swift */; };
+		EA23298229A31B8A000E9A17 /* DiscoveredPrinterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA23298129A31B8A000E9A17 /* DiscoveredPrinterInfo.swift */; };
+		EA24E30929BEC6CA00359D89 /* IPrinterSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA24E30829BEC6CA00359D89 /* IPrinterSearcher.swift */; };
+		EA24E30B29BEC79300359D89 /* NetPrinterSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA24E30A29BEC79300359D89 /* NetPrinterSearcher.swift */; };
+		EA24E30D29BECAE300359D89 /* BluetoothPrinterSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA24E30C29BECAE300359D89 /* BluetoothPrinterSearcher.swift */; };
+		EA24E30F29BECD5E00359D89 /* BLEPrinterSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA24E30E29BECD5E00359D89 /* BLEPrinterSearcher.swift */; };
+		EA329CA5298907B000F46E61 /* ISimplePrintSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA329CA4298907B000F46E61 /* ISimplePrintSettings.swift */; };
+		EA329CA7298A0C1900F46E61 /* MWModelPrintSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA329CA6298A0C1900F46E61 /* MWModelPrintSettings.swift */; };
+		EA36E1E429D57E1F0067B6F9 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36E1E329D57E1F0067B6F9 /* String+Extensions.swift */; };
+		EA5B035829B595D10098376B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA5B035729B595D10098376B /* InfoPlist.strings */; };
+		EA5B035B29B6E0C20098376B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B035A29B6E0C20098376B /* Constant.swift */; };
+		EA5B035E29B715830098376B /* PrintTemplateFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B035D29B715830098376B /* PrintTemplateFacade.swift */; };
+		EA5B036329B87A150098376B /* PrintImageFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B036229B87A150098376B /* PrintImageFacade.swift */; };
+		EA5B036629B8B1550098376B /* PrintPDFFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B036529B8B1550098376B /* PrintPDFFacade.swift */; };
+		EA6747332967EAFB0016D80B /* PrinterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6747322967EAFB0016D80B /* PrinterModel.swift */; };
+		EA67473629681B060016D80B /* PrinterInterfaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA67473529681B060016D80B /* PrinterInterfaceView.swift */; };
+		EA67473829681B190016D80B /* PrinterInterfaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA67473729681B190016D80B /* PrinterInterfaceViewController.swift */; };
+		EA67473A29681BBC0016D80B /* PrinterInterfaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA67473929681BBC0016D80B /* PrinterInterfaceViewModel.swift */; };
+		EA67473D296D5EDE0016D80B /* PrinterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA67473C296D5EDE0016D80B /* PrinterListViewController.swift */; };
+		EA67473F296D5EEE0016D80B /* PrinterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA67473E296D5EEE0016D80B /* PrinterListView.swift */; };
+		EAC63BA629851637008A381D /* PrintPDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC63BA529851637008A381D /* PrintPDFViewController.swift */; };
+		EAC63BA829851648008A381D /* PrintPDFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC63BA729851648008A381D /* PrintPDFView.swift */; };
+		EAC63BAA2985197A008A381D /* PrintPDFViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC63BA92985197A008A381D /* PrintPDFViewModel.swift */; };
+		EAC63BAE29864DF3008A381D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC63BAD29864DF3008A381D /* ResultViewController.swift */; };
+		EAC63BB029864E05008A381D /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC63BAF29864E05008A381D /* ResultView.swift */; };
+		EAC63BB229864EAB008A381D /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC63BB129864EAB008A381D /* ResultViewModel.swift */; };
+		EAC63BB429865C8B008A381D /* PrinterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC63BB329865C8B008A381D /* PrinterListViewModel.swift */; };
+		EAC63BB7298675CF008A381D /* TransferFilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC63BB6298675CF008A381D /* TransferFilesViewController.swift */; };
+		EAC63BB9298675E4008A381D /* TransferFilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC63BB8298675E4008A381D /* TransferFilesView.swift */; };
+		EAC63BBB298766E4008A381D /* TransferFilesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC63BBA298766E4008A381D /* TransferFilesViewModel.swift */; };
+		EAC63BBE2988A1EF008A381D /* PrintSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC63BBD2988A1EF008A381D /* PrintSettingsViewController.swift */; };
+		EAC63BC02988A202008A381D /* PrintSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC63BBF2988A202008A381D /* PrintSettingsView.swift */; };
+		EAC63BC22988A21A008A381D /* PrintSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC63BC12988A21A008A381D /* PrintSettingsViewModel.swift */; };
+		EAC9F1062993916C00C7BC3A /* TemplateKeyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC9F1052993916C00C7BC3A /* TemplateKeyViewModel.swift */; };
+		EAC9F1082993CFF000C7BC3A /* PJModelPrintSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC9F1072993CFF000C7BC3A /* PJModelPrintSettings.swift */; };
+		EAC9F10A29950E2B00C7BC3A /* RJModelPrintSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC9F10929950E2B00C7BC3A /* RJModelPrintSettings.swift */; };
+		EAC9F10C2995159400C7BC3A /* QLModelPrintSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC9F10B2995159400C7BC3A /* QLModelPrintSettings.swift */; };
+		EAC9F10E29951E4900C7BC3A /* PTModelPrintSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC9F10D29951E4900C7BC3A /* PTModelPrintSettings.swift */; };
+		EAC9F1102995227400C7BC3A /* TDModelPrintSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC9F10F2995227400C7BC3A /* TDModelPrintSettings.swift */; };
+		EAC9F11929952A8A00C7BC3A /* PrinterSettingItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC9F11829952A8A00C7BC3A /* PrinterSettingItem+Extension.swift */; };
+		EAC9F11C2995E40200C7BC3A /* PrintTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC9F11B2995E40200C7BC3A /* PrintTemplateViewController.swift */; };
+		EAC9F11E2995E41100C7BC3A /* PrintTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC9F11D2995E41100C7BC3A /* PrintTemplateView.swift */; };
+		EAC9F1202995E42C00C7BC3A /* PrintTemplateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC9F11F2995E42C00C7BC3A /* PrintTemplateViewModel.swift */; };
+		EAC9F122299B1D7900C7BC3A /* EnumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC9F121299B1D7900C7BC3A /* EnumModel.swift */; };
+		EACDA948294C510D0091AB63 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDA947294C510D0091AB63 /* UIView+Extensions.swift */; };
+		EACDA94A294C54AA0091AB63 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDA949294C54AA0091AB63 /* MainView.swift */; };
+		EACDA94C2950658E0091AB63 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDA94B2950658E0091AB63 /* AboutView.swift */; };
+		EACDA94F295157490091AB63 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDA94E295157490091AB63 /* MainViewModel.swift */; };
+		EACDA95129515A8B0091AB63 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EACDA95029515A8B0091AB63 /* Localizable.strings */; };
+		EACDA95629515F740091AB63 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDA95529515F740091AB63 /* AboutViewController.swift */; };
+		EACDA95829515FA30091AB63 /* AboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDA95729515FA30091AB63 /* AboutViewModel.swift */; };
+		EACDA95B2951AA690091AB63 /* PrintImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDA95A2951AA690091AB63 /* PrintImageViewController.swift */; };
+		EACDA95D2951AA810091AB63 /* PrintImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDA95C2951AA810091AB63 /* PrintImageView.swift */; };
+		EACDA95F2951AB4F0091AB63 /* PrintImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDA95E2951AB4F0091AB63 /* PrintImageViewModel.swift */; };
+		EACDA9622951B65A0091AB63 /* PrinterModelListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDA9612951B65A0091AB63 /* PrinterModelListView.swift */; };
+		EACDA9642951B66F0091AB63 /* PrinterModelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDA9632951B66F0091AB63 /* PrinterModelListViewController.swift */; };
+		EACDA9662951B6830091AB63 /* PrinterModelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDA9652951B6830091AB63 /* PrinterModelListViewModel.swift */; };
+		EADB5F7B29ADD4210036D8C6 /* PrinterInfoFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB5F7A29ADD4210036D8C6 /* PrinterInfoFacade.swift */; };
+		EDBF0C972DAF915A00EEE6CF /* PrinterSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBF0C962DAF915A00EEE6CF /* PrinterSelectionView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2067ACFB2941A929009605D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2067ACDC2941A928009605D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2067ACE32941A928009605D2;
+			remoteInfo = "Brother Print SDK Demo";
+		};
+		2067AD052941A929009605D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2067ACDC2941A928009605D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2067ACE32941A928009605D2;
+			remoteInfo = "Brother Print SDK Demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		510B90772AE63270006A6EAE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				510B90762AE63270006A6EAE /* BRLMPrinterKit.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2067ACE42941A928009605D2 /* Brother Print SDK Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brother Print SDK Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2067ACE72941A928009605D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2067ACEB2941A928009605D2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2067ACEE2941A928009605D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2067ACF02941A929009605D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2067ACF32941A929009605D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2067ACF52941A929009605D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2067ACFA2941A929009605D2 /* Brother Print SDK DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Brother Print SDK DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2067ACFE2941A929009605D2 /* BrotherPrintSDKDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrotherPrintSDKDemoTests.swift; sourceTree = "<group>"; };
+		2067AD042941A929009605D2 /* Brother Print SDK DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Brother Print SDK DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2067AD082941A929009605D2 /* BrotherPrintSDKDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrotherPrintSDKDemoUITests.swift; sourceTree = "<group>"; };
+		2067AD0A2941A929009605D2 /* BrotherPrintSDKDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrotherPrintSDKDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2067AD262941AFEE009605D2 /* BRLMPrinterKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BRLMPrinterKit.xcframework; path = Frameworks/BT_Net/BRLMPrinterKit.xcframework; sourceTree = "<group>"; };
+		5101CEED2C3697E10045220E /* FileAnalyzeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FileAnalyzeView.swift; path = FileAnalyze/FileAnalyzeView.swift; sourceTree = "<group>"; };
+		5101CEF02C3697FC0045220E /* FileAnalyzeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileAnalyzeViewController.swift; sourceTree = "<group>"; };
+		5101CEF22C3698110045220E /* FileAnalyzeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileAnalyzeViewModel.swift; sourceTree = "<group>"; };
+		510FB1762AE259740045D0C9 /* BRLMPrinterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BRLMPrinterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		516477222A258D0B0074470A /* TemplatePrintSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatePrintSettingsView.swift; sourceTree = "<group>"; };
+		51A795372C37C98A0006EFE6 /* EnumToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumToString.swift; sourceTree = "<group>"; };
+		D1ABD3F32A9F043F00C1E3B7 /* PrinterInfoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterInfoTest.swift; sourceTree = "<group>"; };
+		D1C23C412BB69AAA0059835C /* GetIntListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetIntListViewController.swift; sourceTree = "<group>"; };
+		D1C23C472BBA8C6A0059835C /* BarButtonItemWithBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItemWithBlock.swift; sourceTree = "<group>"; };
+		D1C23C492BBB9E780059835C /* TransitionUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionUtils.swift; sourceTree = "<group>"; };
+		EA1089CD2A5E94B0004F131C /* FileUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
+		EA15C9E329926500009D0B9B /* PrintSettingsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintSettingsUtil.swift; sourceTree = "<group>"; };
+		EA15C9E629933F3B009D0B9B /* PrinterInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterInfoViewController.swift; sourceTree = "<group>"; };
+		EA15C9E829933F49009D0B9B /* PrinterInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterInfoView.swift; sourceTree = "<group>"; };
+		EA15C9EA29934018009D0B9B /* PrinterInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterInfoViewModel.swift; sourceTree = "<group>"; };
+		EA15C9EC29934892009D0B9B /* CommonAlertUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAlertUtil.swift; sourceTree = "<group>"; };
+		EA18D05729A628CB007C7DB1 /* PrinterConnectUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterConnectUtil.swift; sourceTree = "<group>"; };
+		EA18D05929A7559A007C7DB1 /* PrintErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintErrorModel.swift; sourceTree = "<group>"; };
+		EA23298129A31B8A000E9A17 /* DiscoveredPrinterInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveredPrinterInfo.swift; sourceTree = "<group>"; };
+		EA24E30829BEC6CA00359D89 /* IPrinterSearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPrinterSearcher.swift; sourceTree = "<group>"; };
+		EA24E30A29BEC79300359D89 /* NetPrinterSearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetPrinterSearcher.swift; sourceTree = "<group>"; };
+		EA24E30C29BECAE300359D89 /* BluetoothPrinterSearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothPrinterSearcher.swift; sourceTree = "<group>"; };
+		EA24E30E29BECD5E00359D89 /* BLEPrinterSearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEPrinterSearcher.swift; sourceTree = "<group>"; };
+		EA329CA4298907B000F46E61 /* ISimplePrintSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISimplePrintSettings.swift; sourceTree = "<group>"; };
+		EA329CA6298A0C1900F46E61 /* MWModelPrintSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWModelPrintSettings.swift; sourceTree = "<group>"; };
+		EA36E1E329D57E1F0067B6F9 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		EA5B035729B595D10098376B /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		EA5B035A29B6E0C20098376B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		EA5B035D29B715830098376B /* PrintTemplateFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintTemplateFacade.swift; sourceTree = "<group>"; };
+		EA5B036229B87A150098376B /* PrintImageFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintImageFacade.swift; sourceTree = "<group>"; };
+		EA5B036529B8B1550098376B /* PrintPDFFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintPDFFacade.swift; sourceTree = "<group>"; };
+		EA6747322967EAFB0016D80B /* PrinterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterModel.swift; sourceTree = "<group>"; };
+		EA67473529681B060016D80B /* PrinterInterfaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterInterfaceView.swift; sourceTree = "<group>"; };
+		EA67473729681B190016D80B /* PrinterInterfaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterInterfaceViewController.swift; sourceTree = "<group>"; };
+		EA67473929681BBC0016D80B /* PrinterInterfaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterInterfaceViewModel.swift; sourceTree = "<group>"; };
+		EA67473C296D5EDE0016D80B /* PrinterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterListViewController.swift; sourceTree = "<group>"; };
+		EA67473E296D5EEE0016D80B /* PrinterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterListView.swift; sourceTree = "<group>"; };
+		EAC63BA529851637008A381D /* PrintPDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintPDFViewController.swift; sourceTree = "<group>"; };
+		EAC63BA729851648008A381D /* PrintPDFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintPDFView.swift; sourceTree = "<group>"; };
+		EAC63BA92985197A008A381D /* PrintPDFViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintPDFViewModel.swift; sourceTree = "<group>"; };
+		EAC63BAD29864DF3008A381D /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		EAC63BAF29864E05008A381D /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		EAC63BB129864EAB008A381D /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		EAC63BB329865C8B008A381D /* PrinterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterListViewModel.swift; sourceTree = "<group>"; };
+		EAC63BB6298675CF008A381D /* TransferFilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferFilesViewController.swift; sourceTree = "<group>"; };
+		EAC63BB8298675E4008A381D /* TransferFilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferFilesView.swift; sourceTree = "<group>"; };
+		EAC63BBA298766E4008A381D /* TransferFilesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferFilesViewModel.swift; sourceTree = "<group>"; };
+		EAC63BBD2988A1EF008A381D /* PrintSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintSettingsViewController.swift; sourceTree = "<group>"; };
+		EAC63BBF2988A202008A381D /* PrintSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintSettingsView.swift; sourceTree = "<group>"; };
+		EAC63BC12988A21A008A381D /* PrintSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintSettingsViewModel.swift; sourceTree = "<group>"; };
+		EAC9F1052993916C00C7BC3A /* TemplateKeyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateKeyViewModel.swift; sourceTree = "<group>"; };
+		EAC9F1072993CFF000C7BC3A /* PJModelPrintSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PJModelPrintSettings.swift; sourceTree = "<group>"; };
+		EAC9F10929950E2B00C7BC3A /* RJModelPrintSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RJModelPrintSettings.swift; sourceTree = "<group>"; };
+		EAC9F10B2995159400C7BC3A /* QLModelPrintSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QLModelPrintSettings.swift; sourceTree = "<group>"; };
+		EAC9F10D29951E4900C7BC3A /* PTModelPrintSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTModelPrintSettings.swift; sourceTree = "<group>"; };
+		EAC9F10F2995227400C7BC3A /* TDModelPrintSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDModelPrintSettings.swift; sourceTree = "<group>"; };
+		EAC9F11829952A8A00C7BC3A /* PrinterSettingItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrinterSettingItem+Extension.swift"; sourceTree = "<group>"; };
+		EAC9F11B2995E40200C7BC3A /* PrintTemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintTemplateViewController.swift; sourceTree = "<group>"; };
+		EAC9F11D2995E41100C7BC3A /* PrintTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintTemplateView.swift; sourceTree = "<group>"; };
+		EAC9F11F2995E42C00C7BC3A /* PrintTemplateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintTemplateViewModel.swift; sourceTree = "<group>"; };
+		EAC9F121299B1D7900C7BC3A /* EnumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumModel.swift; sourceTree = "<group>"; };
+		EACDA947294C510D0091AB63 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		EACDA949294C54AA0091AB63 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		EACDA94B2950658E0091AB63 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		EACDA94E295157490091AB63 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		EACDA95029515A8B0091AB63 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		EACDA95529515F740091AB63 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		EACDA95729515FA30091AB63 /* AboutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewModel.swift; sourceTree = "<group>"; };
+		EACDA95A2951AA690091AB63 /* PrintImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintImageViewController.swift; sourceTree = "<group>"; };
+		EACDA95C2951AA810091AB63 /* PrintImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintImageView.swift; sourceTree = "<group>"; };
+		EACDA95E2951AB4F0091AB63 /* PrintImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintImageViewModel.swift; sourceTree = "<group>"; };
+		EACDA9612951B65A0091AB63 /* PrinterModelListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterModelListView.swift; sourceTree = "<group>"; };
+		EACDA9632951B66F0091AB63 /* PrinterModelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterModelListViewController.swift; sourceTree = "<group>"; };
+		EACDA9652951B6830091AB63 /* PrinterModelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterModelListViewModel.swift; sourceTree = "<group>"; };
+		EADB5F7A29ADD4210036D8C6 /* PrinterInfoFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterInfoFacade.swift; sourceTree = "<group>"; };
+		EDBF0C962DAF915A00EEE6CF /* PrinterSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterSelectionView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2067ACE12941A928009605D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				510B90752AE63270006A6EAE /* BRLMPrinterKit.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2067ACF72941A929009605D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2067AD012941A929009605D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2067ACDB2941A928009605D2 = {
+			isa = PBXGroup;
+			children = (
+				2067ACE62941A928009605D2 /* Brother Print SDK Demo */,
+				2067ACFD2941A929009605D2 /* Brother Print SDK DemoTests */,
+				2067AD072941A929009605D2 /* Brother Print SDK DemoUITests */,
+				2067ACE52941A928009605D2 /* Products */,
+				2067AD1C2941ADF5009605D2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2067ACE52941A928009605D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2067ACE42941A928009605D2 /* Brother Print SDK Demo.app */,
+				2067ACFA2941A929009605D2 /* Brother Print SDK DemoTests.xctest */,
+				2067AD042941A929009605D2 /* Brother Print SDK DemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2067ACE62941A928009605D2 /* Brother Print SDK Demo */ = {
+			isa = PBXGroup;
+			children = (
+				2067AD182941AAD0009605D2 /* Source */,
+				2067AD172941AAC4009605D2 /* Resource */,
+			);
+			path = "Brother Print SDK Demo";
+			sourceTree = "<group>";
+		};
+		2067ACFD2941A929009605D2 /* Brother Print SDK DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				D1ABD3F32A9F043F00C1E3B7 /* PrinterInfoTest.swift */,
+				2067ACFE2941A929009605D2 /* BrotherPrintSDKDemoTests.swift */,
+			);
+			path = "Brother Print SDK DemoTests";
+			sourceTree = "<group>";
+		};
+		2067AD072941A929009605D2 /* Brother Print SDK DemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2067AD082941A929009605D2 /* BrotherPrintSDKDemoUITests.swift */,
+				2067AD0A2941A929009605D2 /* BrotherPrintSDKDemoUITestsLaunchTests.swift */,
+			);
+			path = "Brother Print SDK DemoUITests";
+			sourceTree = "<group>";
+		};
+		2067AD172941AAC4009605D2 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2067ACF52941A929009605D2 /* Info.plist */,
+				2067ACF02941A929009605D2 /* Assets.xcassets */,
+				2067AD1B2941AB0D009605D2 /* Storyboard */,
+				EACDA95029515A8B0091AB63 /* Localizable.strings */,
+				EA5B035729B595D10098376B /* InfoPlist.strings */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		2067AD182941AAD0009605D2 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EA5B035929B6E0990098376B /* Const */,
+				EA6747312967EAE70016D80B /* Model */,
+				EACDA94D295156FE0091AB63 /* ViewModels */,
+				EACDA946294C50E40091AB63 /* Extensions */,
+				2067AD192941AAF2009605D2 /* View */,
+				2067ACE72941A928009605D2 /* AppDelegate.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		2067AD192941AAF2009605D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5101CEEC2C3697C10045220E /* FileAnalyze */,
+				D1C23C402BB699200059835C /* Input */,
+				EA15C9E529933F19009D0B9B /* PrinterInfo */,
+				EAC63BBC2988A1CF008A381D /* PrintSettings */,
+				EA67473B296D5EC20016D80B /* PrinterList */,
+				EA67473429681AEC0016D80B /* PrinterInterface */,
+				EAC63BAC29864DC2008A381D /* Result */,
+				EAC9F11A2995E3D800C7BC3A /* PrintTemplate */,
+				EAC63BB5298675A2008A381D /* TransferFiles */,
+				EAC63BA429851603008A381D /* PrintPDF */,
+				EACDA9592951AA3C0091AB63 /* PrintImage */,
+				EACDA9602951B6200091AB63 /* PrinterModelList */,
+				EACDA95429515F5E0091AB63 /* About */,
+				EACDA95329515F180091AB63 /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2067AD1B2941AB0D009605D2 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				2067ACF22941A929009605D2 /* LaunchScreen.storyboard */,
+				2067ACED2941A928009605D2 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		2067AD1C2941ADF5009605D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				510FB1762AE259740045D0C9 /* BRLMPrinterKit.framework */,
+				2067AD262941AFEE009605D2 /* BRLMPrinterKit.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5101CEEC2C3697C10045220E /* FileAnalyze */ = {
+			isa = PBXGroup;
+			children = (
+				5101CEED2C3697E10045220E /* FileAnalyzeView.swift */,
+				5101CEF02C3697FC0045220E /* FileAnalyzeViewController.swift */,
+			);
+			name = FileAnalyze;
+			sourceTree = "<group>";
+		};
+		D1C23C402BB699200059835C /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				D1C23C412BB69AAA0059835C /* GetIntListViewController.swift */,
+				D1C23C472BBA8C6A0059835C /* BarButtonItemWithBlock.swift */,
+				D1C23C492BBB9E780059835C /* TransitionUtils.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		EA15C9E529933F19009D0B9B /* PrinterInfo */ = {
+			isa = PBXGroup;
+			children = (
+				EA15C9E629933F3B009D0B9B /* PrinterInfoViewController.swift */,
+				EA15C9E829933F49009D0B9B /* PrinterInfoView.swift */,
+			);
+			path = PrinterInfo;
+			sourceTree = "<group>";
+		};
+		EA18D05229A61979007C7DB1 /* Transfer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Transfer;
+			sourceTree = "<group>";
+		};
+		EA24E30729BEC69B00359D89 /* PrinterSearch */ = {
+			isa = PBXGroup;
+			children = (
+				EA24E30829BEC6CA00359D89 /* IPrinterSearcher.swift */,
+				EA24E30A29BEC79300359D89 /* NetPrinterSearcher.swift */,
+				EA24E30C29BECAE300359D89 /* BluetoothPrinterSearcher.swift */,
+				EA24E30E29BECD5E00359D89 /* BLEPrinterSearcher.swift */,
+			);
+			path = PrinterSearch;
+			sourceTree = "<group>";
+		};
+		EA329CA3298900DD00F46E61 /* PrintSettings */ = {
+			isa = PBXGroup;
+			children = (
+				EA329CA4298907B000F46E61 /* ISimplePrintSettings.swift */,
+				EA329CA6298A0C1900F46E61 /* MWModelPrintSettings.swift */,
+				EA15C9E329926500009D0B9B /* PrintSettingsUtil.swift */,
+				EAC9F1072993CFF000C7BC3A /* PJModelPrintSettings.swift */,
+				EAC9F10929950E2B00C7BC3A /* RJModelPrintSettings.swift */,
+				EAC9F10B2995159400C7BC3A /* QLModelPrintSettings.swift */,
+				EAC9F10D29951E4900C7BC3A /* PTModelPrintSettings.swift */,
+				EAC9F10F2995227400C7BC3A /* TDModelPrintSettings.swift */,
+			);
+			path = PrintSettings;
+			sourceTree = "<group>";
+		};
+		EA5B035929B6E0990098376B /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				EA5B035A29B6E0C20098376B /* Constant.swift */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
+		EA5B035C29B7156B0098376B /* PrintTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				EA5B035D29B715830098376B /* PrintTemplateFacade.swift */,
+			);
+			path = PrintTemplate;
+			sourceTree = "<group>";
+		};
+		EA5B036129B879FF0098376B /* PrintImage */ = {
+			isa = PBXGroup;
+			children = (
+				EA5B036229B87A150098376B /* PrintImageFacade.swift */,
+			);
+			path = PrintImage;
+			sourceTree = "<group>";
+		};
+		EA5B036429B8B13C0098376B /* PrintPDF */ = {
+			isa = PBXGroup;
+			children = (
+				EA5B036529B8B1550098376B /* PrintPDFFacade.swift */,
+			);
+			path = PrintPDF;
+			sourceTree = "<group>";
+		};
+		EA6747312967EAE70016D80B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA5B036429B8B13C0098376B /* PrintPDF */,
+				EA5B035C29B7156B0098376B /* PrintTemplate */,
+				EA5B036129B879FF0098376B /* PrintImage */,
+				EADB5F7929ADD3F40036D8C6 /* PrinterInfo */,
+				EA18D05229A61979007C7DB1 /* Transfer */,
+				EA24E30729BEC69B00359D89 /* PrinterSearch */,
+				EA6747322967EAFB0016D80B /* PrinterModel.swift */,
+				EAC9F121299B1D7900C7BC3A /* EnumModel.swift */,
+				EAC9F11829952A8A00C7BC3A /* PrinterSettingItem+Extension.swift */,
+				EA329CA3298900DD00F46E61 /* PrintSettings */,
+				EA15C9EC29934892009D0B9B /* CommonAlertUtil.swift */,
+				EA23298129A31B8A000E9A17 /* DiscoveredPrinterInfo.swift */,
+				EA18D05729A628CB007C7DB1 /* PrinterConnectUtil.swift */,
+				EA18D05929A7559A007C7DB1 /* PrintErrorModel.swift */,
+				EA1089CD2A5E94B0004F131C /* FileUtils.swift */,
+				51A795372C37C98A0006EFE6 /* EnumToString.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA67473429681AEC0016D80B /* PrinterInterface */ = {
+			isa = PBXGroup;
+			children = (
+				EA67473529681B060016D80B /* PrinterInterfaceView.swift */,
+				EA67473729681B190016D80B /* PrinterInterfaceViewController.swift */,
+				EDBF0C962DAF915A00EEE6CF /* PrinterSelectionView.swift */,
+			);
+			path = PrinterInterface;
+			sourceTree = "<group>";
+		};
+		EA67473B296D5EC20016D80B /* PrinterList */ = {
+			isa = PBXGroup;
+			children = (
+				EA67473C296D5EDE0016D80B /* PrinterListViewController.swift */,
+				EA67473E296D5EEE0016D80B /* PrinterListView.swift */,
+			);
+			path = PrinterList;
+			sourceTree = "<group>";
+		};
+		EAC63BA429851603008A381D /* PrintPDF */ = {
+			isa = PBXGroup;
+			children = (
+				EAC63BA529851637008A381D /* PrintPDFViewController.swift */,
+				EAC63BA729851648008A381D /* PrintPDFView.swift */,
+			);
+			path = PrintPDF;
+			sourceTree = "<group>";
+		};
+		EAC63BAC29864DC2008A381D /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				EAC63BAD29864DF3008A381D /* ResultViewController.swift */,
+				EAC63BAF29864E05008A381D /* ResultView.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		EAC63BB5298675A2008A381D /* TransferFiles */ = {
+			isa = PBXGroup;
+			children = (
+				EAC63BB6298675CF008A381D /* TransferFilesViewController.swift */,
+				EAC63BB8298675E4008A381D /* TransferFilesView.swift */,
+			);
+			path = TransferFiles;
+			sourceTree = "<group>";
+		};
+		EAC63BBC2988A1CF008A381D /* PrintSettings */ = {
+			isa = PBXGroup;
+			children = (
+				EAC63BBD2988A1EF008A381D /* PrintSettingsViewController.swift */,
+				EAC63BBF2988A202008A381D /* PrintSettingsView.swift */,
+			);
+			path = PrintSettings;
+			sourceTree = "<group>";
+		};
+		EAC9F11A2995E3D800C7BC3A /* PrintTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				EAC9F11B2995E40200C7BC3A /* PrintTemplateViewController.swift */,
+				EAC9F11D2995E41100C7BC3A /* PrintTemplateView.swift */,
+				516477222A258D0B0074470A /* TemplatePrintSettingsView.swift */,
+			);
+			path = PrintTemplate;
+			sourceTree = "<group>";
+		};
+		EACDA946294C50E40091AB63 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EACDA947294C510D0091AB63 /* UIView+Extensions.swift */,
+				EA36E1E329D57E1F0067B6F9 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EACDA94D295156FE0091AB63 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EACDA94E295157490091AB63 /* MainViewModel.swift */,
+				EAC63BC12988A21A008A381D /* PrintSettingsViewModel.swift */,
+				EACDA9652951B6830091AB63 /* PrinterModelListViewModel.swift */,
+				EAC63BB129864EAB008A381D /* ResultViewModel.swift */,
+				EACDA95E2951AB4F0091AB63 /* PrintImageViewModel.swift */,
+				EA67473929681BBC0016D80B /* PrinterInterfaceViewModel.swift */,
+				EAC63BB329865C8B008A381D /* PrinterListViewModel.swift */,
+				EAC63BBA298766E4008A381D /* TransferFilesViewModel.swift */,
+				EAC63BA92985197A008A381D /* PrintPDFViewModel.swift */,
+				EACDA95729515FA30091AB63 /* AboutViewModel.swift */,
+				EA15C9EA29934018009D0B9B /* PrinterInfoViewModel.swift */,
+				EAC9F1052993916C00C7BC3A /* TemplateKeyViewModel.swift */,
+				EAC9F11F2995E42C00C7BC3A /* PrintTemplateViewModel.swift */,
+				5101CEF22C3698110045220E /* FileAnalyzeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EACDA95329515F180091AB63 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2067ACEB2941A928009605D2 /* MainViewController.swift */,
+				EACDA949294C54AA0091AB63 /* MainView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EACDA95429515F5E0091AB63 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				EACDA94B2950658E0091AB63 /* AboutView.swift */,
+				EACDA95529515F740091AB63 /* AboutViewController.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		EACDA9592951AA3C0091AB63 /* PrintImage */ = {
+			isa = PBXGroup;
+			children = (
+				EACDA95A2951AA690091AB63 /* PrintImageViewController.swift */,
+				EACDA95C2951AA810091AB63 /* PrintImageView.swift */,
+			);
+			path = PrintImage;
+			sourceTree = "<group>";
+		};
+		EACDA9602951B6200091AB63 /* PrinterModelList */ = {
+			isa = PBXGroup;
+			children = (
+				EACDA9612951B65A0091AB63 /* PrinterModelListView.swift */,
+				EACDA9632951B66F0091AB63 /* PrinterModelListViewController.swift */,
+			);
+			path = PrinterModelList;
+			sourceTree = "<group>";
+		};
+		EADB5F7929ADD3F40036D8C6 /* PrinterInfo */ = {
+			isa = PBXGroup;
+			children = (
+				EADB5F7A29ADD4210036D8C6 /* PrinterInfoFacade.swift */,
+			);
+			path = PrinterInfo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2067ACE32941A928009605D2 /* Brother Print SDK Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2067AD0E2941A929009605D2 /* Build configuration list for PBXNativeTarget "Brother Print SDK Demo" */;
+			buildPhases = (
+				2067ACE02941A928009605D2 /* Sources */,
+				2067ACE12941A928009605D2 /* Frameworks */,
+				2067ACE22941A928009605D2 /* Resources */,
+				20699CFE2974D9A6002AC35F /* ShellScript */,
+				510B90772AE63270006A6EAE /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Brother Print SDK Demo";
+			productName = "Brother Print SDK Demo";
+			productReference = 2067ACE42941A928009605D2 /* Brother Print SDK Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2067ACF92941A929009605D2 /* Brother Print SDK DemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2067AD112941A929009605D2 /* Build configuration list for PBXNativeTarget "Brother Print SDK DemoTests" */;
+			buildPhases = (
+				2067ACF62941A929009605D2 /* Sources */,
+				2067ACF72941A929009605D2 /* Frameworks */,
+				2067ACF82941A929009605D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2067ACFC2941A929009605D2 /* PBXTargetDependency */,
+			);
+			name = "Brother Print SDK DemoTests";
+			productName = "Brother Print SDK DemoTests";
+			productReference = 2067ACFA2941A929009605D2 /* Brother Print SDK DemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2067AD032941A929009605D2 /* Brother Print SDK DemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2067AD142941A929009605D2 /* Build configuration list for PBXNativeTarget "Brother Print SDK DemoUITests" */;
+			buildPhases = (
+				2067AD002941A929009605D2 /* Sources */,
+				2067AD012941A929009605D2 /* Frameworks */,
+				2067AD022941A929009605D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2067AD062941A929009605D2 /* PBXTargetDependency */,
+			);
+			name = "Brother Print SDK DemoUITests";
+			productName = "Brother Print SDK DemoUITests";
+			productReference = 2067AD042941A929009605D2 /* Brother Print SDK DemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2067ACDC2941A928009605D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					2067ACE32941A928009605D2 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					2067ACF92941A929009605D2 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 2067ACE32941A928009605D2;
+					};
+					2067AD032941A929009605D2 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 2067ACE32941A928009605D2;
+					};
+				};
+			};
+			buildConfigurationList = 2067ACDF2941A928009605D2 /* Build configuration list for PBXProject "Brother Print SDK Demo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2067ACDB2941A928009605D2;
+			productRefGroup = 2067ACE52941A928009605D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2067ACE32941A928009605D2 /* Brother Print SDK Demo */,
+				2067ACF92941A929009605D2 /* Brother Print SDK DemoTests */,
+				2067AD032941A929009605D2 /* Brother Print SDK DemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2067ACE22941A928009605D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2067ACF42941A929009605D2 /* LaunchScreen.storyboard in Resources */,
+				EACDA95129515A8B0091AB63 /* Localizable.strings in Resources */,
+				2067ACF12941A929009605D2 /* Assets.xcassets in Resources */,
+				2067ACEF2941A928009605D2 /* Main.storyboard in Resources */,
+				EA5B035829B595D10098376B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2067ACF82941A929009605D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2067AD022941A929009605D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20699CFE2974D9A6002AC35F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# if which swiftlint >/dev/null; then\n#   swiftlint\n# else\n#   echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n# fi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2067ACE02941A928009605D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EACDA95B2951AA690091AB63 /* PrintImageViewController.swift in Sources */,
+				5101CEEE2C3697E10045220E /* FileAnalyzeView.swift in Sources */,
+				EAC9F1062993916C00C7BC3A /* TemplateKeyViewModel.swift in Sources */,
+				EAC63BB429865C8B008A381D /* PrinterListViewModel.swift in Sources */,
+				EAC63BB9298675E4008A381D /* TransferFilesView.swift in Sources */,
+				EACDA94F295157490091AB63 /* MainViewModel.swift in Sources */,
+				EA5B035E29B715830098376B /* PrintTemplateFacade.swift in Sources */,
+				EA24E30D29BECAE300359D89 /* BluetoothPrinterSearcher.swift in Sources */,
+				EAC63BC22988A21A008A381D /* PrintSettingsViewModel.swift in Sources */,
+				EACDA95F2951AB4F0091AB63 /* PrintImageViewModel.swift in Sources */,
+				EA15C9ED29934892009D0B9B /* CommonAlertUtil.swift in Sources */,
+				EAC9F10E29951E4900C7BC3A /* PTModelPrintSettings.swift in Sources */,
+				2067ACEC2941A928009605D2 /* MainViewController.swift in Sources */,
+				EA5B035B29B6E0C20098376B /* Constant.swift in Sources */,
+				EAC9F1082993CFF000C7BC3A /* PJModelPrintSettings.swift in Sources */,
+				EA18D05A29A7559A007C7DB1 /* PrintErrorModel.swift in Sources */,
+				EACDA95D2951AA810091AB63 /* PrintImageView.swift in Sources */,
+				EACDA9622951B65A0091AB63 /* PrinterModelListView.swift in Sources */,
+				EAC9F10C2995159400C7BC3A /* QLModelPrintSettings.swift in Sources */,
+				EA24E30B29BEC79300359D89 /* NetPrinterSearcher.swift in Sources */,
+				EA329CA7298A0C1900F46E61 /* MWModelPrintSettings.swift in Sources */,
+				EACDA9662951B6830091AB63 /* PrinterModelListViewModel.swift in Sources */,
+				EAC9F11C2995E40200C7BC3A /* PrintTemplateViewController.swift in Sources */,
+				D1C23C482BBA8C6A0059835C /* BarButtonItemWithBlock.swift in Sources */,
+				EAC9F122299B1D7900C7BC3A /* EnumModel.swift in Sources */,
+				EAC63BB229864EAB008A381D /* ResultViewModel.swift in Sources */,
+				EAC9F1202995E42C00C7BC3A /* PrintTemplateViewModel.swift in Sources */,
+				5101CEF32C3698110045220E /* FileAnalyzeViewModel.swift in Sources */,
+				D1C23C422BB69AAA0059835C /* GetIntListViewController.swift in Sources */,
+				EA67473F296D5EEE0016D80B /* PrinterListView.swift in Sources */,
+				EA5B036629B8B1550098376B /* PrintPDFFacade.swift in Sources */,
+				EA67473D296D5EDE0016D80B /* PrinterListViewController.swift in Sources */,
+				D1C23C4A2BBB9E780059835C /* TransitionUtils.swift in Sources */,
+				EAC9F11E2995E41100C7BC3A /* PrintTemplateView.swift in Sources */,
+				EAC63BBB298766E4008A381D /* TransferFilesViewModel.swift in Sources */,
+				EA15C9E729933F3B009D0B9B /* PrinterInfoViewController.swift in Sources */,
+				EAC63BAA2985197A008A381D /* PrintPDFViewModel.swift in Sources */,
+				EAC9F11929952A8A00C7BC3A /* PrinterSettingItem+Extension.swift in Sources */,
+				EA24E30F29BECD5E00359D89 /* BLEPrinterSearcher.swift in Sources */,
+				2067ACE82941A928009605D2 /* AppDelegate.swift in Sources */,
+				EAC63BAE29864DF3008A381D /* ResultViewController.swift in Sources */,
+				EAC63BB7298675CF008A381D /* TransferFilesViewController.swift in Sources */,
+				5101CEF12C3697FC0045220E /* FileAnalyzeViewController.swift in Sources */,
+				EACDA9642951B66F0091AB63 /* PrinterModelListViewController.swift in Sources */,
+				EAC9F10A29950E2B00C7BC3A /* RJModelPrintSettings.swift in Sources */,
+				EACDA948294C510D0091AB63 /* UIView+Extensions.swift in Sources */,
+				EA67473629681B060016D80B /* PrinterInterfaceView.swift in Sources */,
+				EA67473829681B190016D80B /* PrinterInterfaceViewController.swift in Sources */,
+				EA6747332967EAFB0016D80B /* PrinterModel.swift in Sources */,
+				EA15C9E429926500009D0B9B /* PrintSettingsUtil.swift in Sources */,
+				EACDA94A294C54AA0091AB63 /* MainView.swift in Sources */,
+				EACDA94C2950658E0091AB63 /* AboutView.swift in Sources */,
+				EAC63BBE2988A1EF008A381D /* PrintSettingsViewController.swift in Sources */,
+				EAC63BC02988A202008A381D /* PrintSettingsView.swift in Sources */,
+				EA24E30929BEC6CA00359D89 /* IPrinterSearcher.swift in Sources */,
+				EA329CA5298907B000F46E61 /* ISimplePrintSettings.swift in Sources */,
+				EADB5F7B29ADD4210036D8C6 /* PrinterInfoFacade.swift in Sources */,
+				EA1089CE2A5E94B0004F131C /* FileUtils.swift in Sources */,
+				EA36E1E429D57E1F0067B6F9 /* String+Extensions.swift in Sources */,
+				EAC9F1102995227400C7BC3A /* TDModelPrintSettings.swift in Sources */,
+				EAC63BA829851648008A381D /* PrintPDFView.swift in Sources */,
+				EA15C9EB29934018009D0B9B /* PrinterInfoViewModel.swift in Sources */,
+				EDBF0C972DAF915A00EEE6CF /* PrinterSelectionView.swift in Sources */,
+				EA67473A29681BBC0016D80B /* PrinterInterfaceViewModel.swift in Sources */,
+				EAC63BB029864E05008A381D /* ResultView.swift in Sources */,
+				516477232A258D0B0074470A /* TemplatePrintSettingsView.swift in Sources */,
+				51A795382C37C98A0006EFE6 /* EnumToString.swift in Sources */,
+				EA5B036329B87A150098376B /* PrintImageFacade.swift in Sources */,
+				EAC63BA629851637008A381D /* PrintPDFViewController.swift in Sources */,
+				EA15C9E929933F49009D0B9B /* PrinterInfoView.swift in Sources */,
+				EA18D05829A628CB007C7DB1 /* PrinterConnectUtil.swift in Sources */,
+				EACDA95629515F740091AB63 /* AboutViewController.swift in Sources */,
+				EA23298229A31B8A000E9A17 /* DiscoveredPrinterInfo.swift in Sources */,
+				EACDA95829515FA30091AB63 /* AboutViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2067ACF62941A929009605D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1ABD3F42A9F043F00C1E3B7 /* PrinterInfoTest.swift in Sources */,
+				2067ACFF2941A929009605D2 /* BrotherPrintSDKDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2067AD002941A929009605D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2067AD092941A929009605D2 /* BrotherPrintSDKDemoUITests.swift in Sources */,
+				2067AD0B2941A929009605D2 /* BrotherPrintSDKDemoUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2067ACFC2941A929009605D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2067ACE32941A928009605D2 /* Brother Print SDK Demo */;
+			targetProxy = 2067ACFB2941A929009605D2 /* PBXContainerItemProxy */;
+		};
+		2067AD062941A929009605D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2067ACE32941A928009605D2 /* Brother Print SDK Demo */;
+			targetProxy = 2067AD052941A929009605D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2067ACED2941A928009605D2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2067ACEE2941A928009605D2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2067ACF22941A929009605D2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2067ACF32941A929009605D2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2067AD0C2941A929009605D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2067AD0D2941A929009605D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2067AD0F2941A929009605D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 594;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Brother Print SDK Demo/Resource/Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Required to search for and connect to your printer";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Required to search for and connect to your printer";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Required to search for and connect to your printer";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Used to access location when using the app ";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Used to add images to labels";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 4.13.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2067AD102941A929009605D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 594;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Brother Print SDK Demo/Resource/Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Required to search for and connect to your printer";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Required to search for and connect to your printer";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Required to search for and connect to your printer";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Used to access location when using the app ";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Used to add images to labels";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 4.13.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2067AD122941A929009605D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SRHRDE9MQ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brother.Brother-Print-SDK-DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Brother Print SDK Demo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Brother Print SDK Demo";
+			};
+			name = Debug;
+		};
+		2067AD132941A929009605D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SRHRDE9MQ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brother.Brother-Print-SDK-DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Brother Print SDK Demo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Brother Print SDK Demo";
+			};
+			name = Release;
+		};
+		2067AD152941A929009605D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SRHRDE9MQ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brother.Brother-Print-SDK-DemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Brother Print SDK Demo";
+			};
+			name = Debug;
+		};
+		2067AD162941A929009605D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SRHRDE9MQ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brother.Brother-Print-SDK-DemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Brother Print SDK Demo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2067ACDF2941A928009605D2 /* Build configuration list for PBXProject "Brother Print SDK Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2067AD0C2941A929009605D2 /* Debug */,
+				2067AD0D2941A929009605D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2067AD0E2941A929009605D2 /* Build configuration list for PBXNativeTarget "Brother Print SDK Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2067AD0F2941A929009605D2 /* Debug */,
+				2067AD102941A929009605D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2067AD112941A929009605D2 /* Build configuration list for PBXNativeTarget "Brother Print SDK DemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2067AD122941A929009605D2 /* Debug */,
+				2067AD132941A929009605D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2067AD142941A929009605D2 /* Build configuration list for PBXNativeTarget "Brother Print SDK DemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2067AD152941A929009605D2 /* Debug */,
+				2067AD162941A929009605D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2067ACDC2941A928009605D2 /* Project object */;
+}

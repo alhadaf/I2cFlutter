@@ -1,0 +1,76 @@
+@startuml
+package  "Brother_Print_SDK_Demo" {
+    PrinterListViewController ..> PrinterSearchError
+    PrinterListViewController *-- PrinterListViewModel
+    PrinterListViewController *-- PrinterListView
+    PrinterListViewController ..> CommonAlertUtil
+    PrinterListViewModel ..> IPrinterInfo
+    PrinterListViewModel ..> PrinterInfoSaveDelegate
+    PrinterListViewModel ..> InterfaceType
+    PrinterListViewModel --> IPrinterSearcher
+    PrinterListView ..> PrinterListViewModel
+    PrinterListView ..> PrinterListViewDelegate
+    PrinterListViewDelegate <|.. PrinterListViewController
+    IPrinterInfo <|.. WiFiPrinterInfo
+    IPrinterInfo <|.. BluetoothPrinterInfo
+    IPrinterInfo <|.. BLEPrinterInfo
+    IPrinterSearcher <|.. BLEPrinterSearcher
+    IPrinterSearcher <|.. BluetoothPrinterSearcher
+    IPrinterSearcher <|.. NetPrinterSearcher
+    IPrinterSearcher ..> PrinterSearchError
+    IPrinterSearcher ..> IPrinterInfo
+    NetPrinterSearcher ..> WiFiPrinterInfo
+    NetPrinterSearcher ..> IPrinterInfo
+    NetPrinterSearcher ..> NetworkUtils
+    BLEPrinterSearcher ..> BLEPrinterInfo
+    BLEPrinterSearcher ..> IPrinterInfo
+    BluetoothPrinterSearcher ..> BluetoothPrinterInfo
+    BluetoothPrinterSearcher ..> IPrinterInfo
+}
+package "BRLMPrinterKit" {
+    PrinterListViewModel --> BRLMChannelType
+    NetPrinterSearcher ..> BRLMChannel
+    NetPrinterSearcher ..> BRLMPrinterSearcher
+    BluetoothPrinterSearcher ..> BRLMChannel
+    BluetoothPrinterSearcher ..> BRLMPrinterSearcher
+    BLEPrinterSearcher ..> BRLMChannel
+    BLEPrinterSearcher ..> BRLMPrinterSearcher
+}
+interface IPrinterSearcher {
+  + start(callback: @escaping(String?, [IPrinterInfo]?]) -> Void)
+  + cancel()
+}
+interface IPrinterInfo {
+    + channelType: BRLMChannelType
+    + modelName: String
+    + func fetchPrinterModel() -> PrinterModel?
+}
+interface PrinterInfoSaveDelegate {
+    + func savePrinterInfo(info: IPrinterInfo?)
+}
+class PrinterListViewModel{
+    + channelType: BRLMChannelType?
+    + isSearching: Bool = false
+    + itemList: [PrinterItemData] = []
+    + printerInfoList: [IPrinterInfo] = []
+    + typeName: String = ""
+    + delegate: PrinterInfoSaveDelegate?
+    + printerSearcher: IPrinterSearcher?
+    + func setChannelType(type: InterfaceType)
+    + func startSearch(callBack: @escaping(String) -> Void)
+    + func stopSearch()
+    + func refreshPrinterItemList()
+    + func savePrinterInfo(item: PrinterItemData)
+}
+object CommonAlertUtil {
+    + {static} func waitingAlert(callBack: @escaping() -> Void) -> UIAlertController
+    + {static} func cancelingAlert() -> UIAlertController
+    + {static} func showSearchingAlert(callBack: @escaping() -> Void) -> UIAlertController
+    + {static} func editAlert(title: String, message: String, callBack: @escaping(String) -> Void) -> UIAlertController
+}
+enum InterfaceType {
+    + network
+    + bluetooth
+    + ble
+}
+@enduml

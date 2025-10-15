@@ -1,0 +1,48 @@
+@startuml
+package  "Brother_Print_SDK_Demo" {
+    GetDeleteTemplateViewModel --> TemplateManageFacade
+    GetDeleteTemplateViewModel --> IPrinterInfo
+    GetDeleteTemplateViewController *-- GetDeleteTemplateViewModel
+    GetDeleteTemplateViewController *-- GetDeleteTemplateView
+    GetDeleteTemplateViewController ..> ResultViewController
+    GetDeleteTemplateViewController ..> CommonAlertUtil
+    GetDeleteTemplateView ..> GetDeleteTemplateViewModel
+    GetDeleteTemplateView ..> GetDeleteTemplateViewDelegate
+    GetDeleteTemplateViewDelegate <|.. GetDeleteTemplateViewController
+    PrinterInfoSaveDelegate <|.. GetDeleteTemplateViewController
+    ResultViewController *-- ResultViewModel
+    ResultViewController *-- ResultView
+    ResultView ..> ResultViewModel
+    TemplateManageFacade ..> PrinterConnectUtil
+    TemplateManageFacade ..> IPrinterInfo
+    PrinterConnectUtil ..> IPrinterInfo
+}
+package "BRLMPrinterKit" {
+    PrinterConnectUtil ..> BRLMChannel
+    PrinterConnectUtil ..> BRPtouchPrinter
+    PrinterConnectUtil ..> BRPtouchDeviceInfo
+    GetDeleteTemplateViewModel ..> BRPtouchTemplateInfo
+    ResultViewModel ..> BRPtouchTemplateInfo
+}
+interface IPrinterInfo {
+    + channelType: BRLMChannelType
+    + modelName: String
+    + func fetchPrinterModel() -> PrinterModel?
+}
+class GetDeleteTemplateViewModel{
+    + printerInfo: IPrinterInfo?
+    + keyList: [Int]
+    + func fetchTemplateList(callBack: @escaping(String, [BRPtouchTemplateInfo]) -> Void)
+    + func deleteTemplateList(callBack: @escaping(String) -> Void)
+    + func setKeyList(number: String) -> Bool
+}
+class ResultViewModel {
+    + resultMessage: String
+    + templateList: [BRPtouchTemplateInfo]
+}
+class PrinterConnectUtil {
+    + func fetchCurrentChannel(context: Context, printerInfo: IPrinterInfo) -> BRLMChannel?
+    + func fetchPrinter(context: Context, printerInfo: IPrinterInfo) -> BRPtouchPrinter?
+    + func fetchDeviceInfo(printerInfo: IPrinterInfo) -> BRPtouchDeviceInfo
+}
+@enduml

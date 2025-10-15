@@ -1,0 +1,50 @@
+@startuml
+package  "Brother_Print_SDK_Demo" {
+    PrinterConfigurationViewModel --> PrinterConfigurationFacade
+    PrinterConfigurationViewModel --> IPrinterInfo
+    PrinterConfigurationViewController *-- PrinterConfigurationViewModel
+    PrinterConfigurationViewController *-- PrinterConfigurationView
+    PrinterConfigurationViewController ..> ResultViewController
+    PrinterConfigurationViewController ..> CommonAlertUtil
+    PrinterConfigurationView ..> PrinterConfigurationViewModel
+    PrinterConfigurationView ..> PrinterConfigurationViewDelegate
+    PrinterConfigurationViewDelegate <|.. PrinterConfigurationViewController
+    PrinterInfoSaveDelegate <|.. PrinterConfigurationViewController
+    ResultViewController *-- ResultViewModel
+    ResultViewController *-- ResultView
+    ResultView ..> ResultViewModel
+    PrinterConfigurationFacade ..> PrinterConnectUtil
+    PrinterConfigurationFacade ..> IPrinterInfo
+    PrinterConnectUtil ..> IPrinterInfo
+}
+package "BRLMPrinterKit" {
+    PrinterConnectUtil ..> BRLMChannel
+    PrinterConnectUtil ..> BRPtouchPrinter
+    PrinterConnectUtil ..> BRPtouchDeviceInfo
+    PrinterConfigurationViewModel ..> PrinterSettingItem
+}
+interface IPrinterInfo {
+    + channelType: BRLMChannelType
+    + modelName: String
+    + func fetchPrinterModel() -> PrinterModel?
+}
+class PrinterConfigurationViewModel{
+    + printerInfo: IPrinterInfo?
+    + itemList: [PrinterSettingItem]
+    + configurationSetList: [ConfigurationItemData]
+    + func fetchPrinterConfigurations(callBack: @escaping(String) -> Void)
+    + func setPrinterConfigurations(callBack: @escaping(String) -> Void)
+    + func setItemData(key: PrinterSettingItem, value: String)
+}
+class PrinterConnectUtil {
+    + func fetchCurrentChannel(context: Context, printerInfo: IPrinterInfo) -> BRLMChannel?
+    + func fetchPrinter(context: Context, printerInfo: IPrinterInfo) -> BRPtouchPrinter?
+    + func fetchDeviceInfo(printerInfo: IPrinterInfo) -> BRPtouchDeviceInfo
+}
+object CommonAlertUtil {
+    + {static} func waitingAlert(callBack: @escaping() -> Void) -> UIAlertController
+    + {static} func cancelingAlert() -> UIAlertController
+    + {static} func showSearchingAlert(callBack: @escaping() -> Void) -> UIAlertController
+    + {static} func editAlert(title: String, message: String, callBack: @escaping(String) -> Void) -> UIAlertController
+}
+@enduml

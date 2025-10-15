@@ -1,0 +1,58 @@
+@startuml
+package  "Brother_Print_SDK_Demo" {
+    PrintPDFViewModel --> IPrinterInfo
+    PrintPDFViewController *-- PrintPDFViewModel
+    PrintPDFViewController *-- PrintPDFView
+    PrintPDFViewController ..> PrintSettingsViewController
+    PrintSettingsViewController ..> ResultViewController
+    PrintSettingsViewController *-- PrintSettingsViewModel
+    PrintSettingsViewController *-- PrintSettingsView
+    PrintSettingsViewModel ..> PrintPDFFacade
+    PrintPDFViewController ..> PrintType
+    PrintPDFViewController ..> ImagePrnType
+    PrintPDFViewController ..> PDFPrintType
+    PrintPDFViewDelegate <|.. PrintPDFViewController
+    PrinterInfoSaveDelegate <|.. PrintPDFViewController
+    PrintPDFView ..> PrintPDFViewDelegate
+    PrintPDFView ..> PrintPDFViewModel
+    PrintPDFFacade ..> PrinterConnectUtil
+    PrintPDFFacade ..> IPrinterInfo
+    PrinterConnectUtil ..> IPrinterInfo
+}
+package "BRLMPrinterKit" {
+    PrinterConnectUtil ..> BRLMChannel
+    PrinterConnectUtil ..> BRPtouchPrinter
+    PrinterConnectUtil ..> BRPtouchDeviceInfo
+    PrintPDFFacade ..> BRLMPrintSettingsProtocal
+}
+interface IPrinterInfo {
+    + channelType: BRLMChannelType
+    + modelName: String
+    + func fetchPrinterModel() -> PrinterModel?
+}
+class PrintPDFFacade {
+    + func printPDFWithURL(info: IPrinterInfo, url: URL?, settings: BRLMPrintSettingsProtocal?) -> String
+    + func printPDFWithURLs(info: IPrinterInfo, urls: [URL]?, settings: BRLMPrintSettingsProtocal?) -> String
+    + func printPDFWithPages(info: IPrinterInfo, url: URL?, pages: [Int]?, settings: BRLMPrintSettingsProtocal?) -> String
+    + func cancelPrinting()
+}
+class PrintPDFViewModel{
+    + printerInfo: IPrinterInfo?
+    + pages: String
+    + pdfUrl: [URL]
+}
+enum PDFPrintType {
+    + pdfURL
+    + pdfURLs
+    + pdfPages
+}
+enum PrintType {
+    + image
+    + pdf
+}
+class PrinterConnectUtil {
+    + func fetchCurrentChannel(context: Context, printerInfo: IPrinterInfo) -> BRLMChannel?
+    + func fetchPrinter(context: Context, printerInfo: IPrinterInfo) -> BRPtouchPrinter?
+    + func fetchDeviceInfo(printerInfo: IPrinterInfo) -> BRPtouchDeviceInfo
+}
+@enduml

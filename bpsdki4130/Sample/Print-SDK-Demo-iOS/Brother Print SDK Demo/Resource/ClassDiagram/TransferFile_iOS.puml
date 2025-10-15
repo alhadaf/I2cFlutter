@@ -1,0 +1,48 @@
+@startuml
+package  "Brother_Print_SDK_Demo" {
+    TransferFilesViewModel ..> TransferFileType
+    TransferFilesViewModel --> TransferFileFacade
+    TransferFilesViewModel --> IPrinterInfo
+    TransferFilesViewController *-- TransferFilesViewModel
+    TransferFilesViewController *-- TransferFilesView
+    TransferFilesViewController ..> ResultViewController
+    TransferFilesViewController ..> TransferFileType
+    TransferFilesView ..> TransferFilesViewModel
+    TransferFilesView ..> TransferFilesViewDelegate
+    TransferFilesViewDelegate <|.. TransferFilesViewController
+    PrinterInfoSaveDelegate <|.. TransferFilesViewController
+    ResultViewController *-- ResultViewModel
+    ResultViewController *-- ResultView
+    ResultView ..> ResultViewModel
+    TransferFileFacade ..> TransferFileType
+    TransferFileFacade ..> PrinterConnectUtil
+    TransferFileFacade ..> IPrinterInfo
+    PrinterConnectUtil ..> IPrinterInfo
+}
+package "BRLMPrinterKit" {
+    PrinterConnectUtil ..> BRLMChannel
+    PrinterConnectUtil ..> BRPtouchPrinter
+    PrinterConnectUtil ..> BRPtouchDeviceInfo
+}
+interface IPrinterInfo {
+    + channelType: BRLMChannelType
+    + modelName: String
+    + func fetchPrinterModel() -> PrinterModel?
+}
+class TransferFilesViewModel{
+    + printerInfo: IPrinterInfo?
+    + transferFacade: TransferFileFacade
+    + func transferFile(type: TransferFileType, filePath: URL, callBack: @escaping(String) -> Void)
+}
+enum TransferFileType {
+    + FIRM
+    + TEMPLATE
+    + DATABASE
+    + FILE
+}
+class PrinterConnectUtil {
+    + func fetchCurrentChannel(context: Context, printerInfo: IPrinterInfo) -> BRLMChannel?
+    + func fetchPrinter(context: Context, printerInfo: IPrinterInfo) -> BRPtouchPrinter?
+    + func fetchDeviceInfo(printerInfo: IPrinterInfo) -> BRPtouchDeviceInfo
+}
+@enduml

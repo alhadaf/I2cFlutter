@@ -1,0 +1,24 @@
+@startuml
+package  "Brother_Print_SDK_Demo" {
+    PrinterModelListViewController *-- PrinterModelListViewModel
+    PrinterModelListViewModel ..> ModelListType
+    PrinterModelListViewModel ..> PrinterModelSpec
+    ResultViewController *-- ResultViewModel
+    ResultViewController *-- ResultView
+    ResultView ..> ResultViewModel
+    PrinterModelListViewController ..> ResultViewController
+}
+package "BRLMPrinterKit" {
+    PrinterModelListViewModel ..> BRLMPrinterModelSpec
+}
+enum ModelListType {
+    + pdfURL
+    + pdfURLs
+    + pdfPages
+}
+class PrinterModelListViewModel{
+    + type: ModelListType
+    + printerModelList: [String]
+    + func fetchModelSpec(modelName: String) -> String
+}
+@enduml

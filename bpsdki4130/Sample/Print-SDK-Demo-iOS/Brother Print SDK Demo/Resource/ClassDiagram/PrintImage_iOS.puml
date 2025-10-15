@@ -1,0 +1,63 @@
+@startuml
+package  "Brother_Print_SDK_Demo" {
+    PrintImageViewModel --> IPrinterInfo
+    PrintImageViewController *-- PrintImageViewModel
+    PrintImageViewController *-- PrintImageView
+    PrintImageViewController ..> PrintSettingsViewController
+    PrintSettingsViewController ..> ResultViewController
+    PrintSettingsViewController *-- PrintSettingsViewModel
+    PrintSettingsViewController *-- PrintSettingsView
+    PrintSettingsViewModel ..> PrintImageFacade
+    PrintImageViewController ..> PrintType
+    PrintImageViewController ..> ImagePrnType
+    PrintImageViewController ..> PDFPrintType
+    PrintImageViewDelegate <|.. PrintImageViewController
+    PrinterInfoSaveDelegate <|.. PrintImageViewController
+    PrintImageView ..> PrintImageViewDelegate
+    PrintImageView ..> PrintImageViewModel
+    PrintImageFacade ..> PrinterConnectUtil
+    PrintImageFacade ..> IPrinterInfo
+    PrinterConnectUtil ..> IPrinterInfo
+}
+package "BRLMPrinterKit" {
+    PrinterConnectUtil ..> BRLMChannel
+    PrinterConnectUtil ..> BRPtouchPrinter
+    PrinterConnectUtil ..> BRPtouchDeviceInfo
+    PrintImageFacade ..> BRLMPrintSettingsProtocal
+}
+interface IPrinterInfo {
+    + channelType: BRLMChannelType
+    + modelName: String
+    + func fetchPrinterModel() -> PrinterModel?
+}
+class PrintImageFacade {
+    + func printImageWithImage(info: IPrinterInfo, image: CGImage?, settings: BRLMPrintSettingsProtocal?) -> String
+    + func printImageWithURL(info: IPrinterInfo, url: URL?, settings: BRLMPrintSettingsProtocal?) -> String
+    + func printImageWithURLs(info: IPrinterInfo, urls: [URL]?, settings: BRLMPrintSettingsProtocal?) -> String
+    + func printPRNWithURL(info: IPrinterInfo, url: URL?) -> String
+    + func printPRNWithURLs(info: IPrinterInfo, url: [URL]?) -> String
+    + func printPRNWithData(info: IPrinterInfo, data: Data?) -> String
+    + func cancelPrinting()
+}
+class PrintImageViewModel{
+    + printerInfo: IPrinterInfo?
+    + func cancel()
+}
+enum ImagePrnType {
+    + imageFile
+    + imageURL
+    + imageURLs
+    + prnFile
+    + prnFiles
+    + rawData
+}
+enum PrintType {
+    + image
+    + pdf
+}
+class PrinterConnectUtil {
+    + func fetchCurrentChannel(context: Context, printerInfo: IPrinterInfo) -> BRLMChannel?
+    + func fetchPrinter(context: Context, printerInfo: IPrinterInfo) -> BRPtouchPrinter?
+    + func fetchDeviceInfo(printerInfo: IPrinterInfo) -> BRPtouchDeviceInfo
+}
+@enduml

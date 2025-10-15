@@ -1,0 +1,12 @@
+/* 
+  InfoPlist.strings
+  Brother Print SDK Demo
+
+  Created by Brother Industries, Ltd. on 2023/3/6.
+  
+*/
+"NSBluetoothPeripheralUsageDescription"         = "Required to search for and connect to your printer";
+"NSBluetoothAlwaysUsageDescription"             = "Required to search for and connect to your printer";
+"NSLocationWhenInUseUsageDescription"           = "Used to access location when using the app";
+"NSLocalNetworkUsageDescription"                = "Required to search for and connect to your printer";
+"NSPhotoLibraryUsageDescription"                = "Used to add images to labels";

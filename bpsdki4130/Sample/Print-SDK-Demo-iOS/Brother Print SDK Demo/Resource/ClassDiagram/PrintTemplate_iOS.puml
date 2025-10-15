@@ -1,0 +1,64 @@
+@startuml
+package  "Brother_Print_SDK_Demo" {
+    PrintTemplateViewModel ..> TemplateEncoding
+    PrintTemplateViewModel ..> TemplateObjectType
+    PrintTemplateViewModel --> PrintTemplateFacade
+    PrintTemplateViewModel --> IPrinterInfo
+    PrintTemplateViewController *-- PrintTemplateViewModel
+    PrintTemplateViewController *-- PrintTemplateView
+    PrintTemplateViewController ..> ResultViewController
+    PrintTemplateViewController ..> CommonAlertUtil
+    PrintTemplateView ..> PrintTemplateViewModel
+    ResultViewController *-- ResultViewModel
+    ResultViewController *-- ResultView
+    ResultView ..> ResultViewModel
+    PrintTemplateFacade ..> PrinterConnectUtil
+    PrintTemplateFacade ..> IPrinterInfo
+    PrinterConnectUtil ..> IPrinterInfo
+}
+package "BRLMPrinterKit" {
+    PrinterConnectUtil ..> BRLMChannel
+    PrinterConnectUtil ..> BRPtouchPrinter
+    PrinterConnectUtil ..> BRPtouchDeviceInfo
+    PrintTemplateFacade ..> BRPtouchPrinter
+}
+interface IPrinterInfo {
+    + channelType: BRLMChannelType
+    + modelName: String
+    + func fetchPrinterModel() -> PrinterModel?
+}
+class PrintTemplateViewModel{
+    + printerInfo: IPrinterInfo?
+    + encodingItemList: [TemplateEncoding]
+    + templateItemList: [[TemplatePrintData] ]
+    + printData: String
+    + encodingType: TemplateEncoding
+    + key: String
+    + func startPrint(callBack: @escaping(String) -> Void)
+    + func addInputData(index: String, objectName: String, text: String, type: TemplateObjectType)
+    + func deleteInputData()
+    + func addEndKey()
+    + func cancelPrinting()
+}
+enum TemplateEncoding {
+    + ENG
+    + JPN
+    + CHN
+}
+enum TemplateObjectType {
+    + text
+    + index
+    + objectName
+}
+class PrinterConnectUtil {
+    + func fetchCurrentChannel(context: Context, printerInfo: IPrinterInfo) -> BRLMChannel?
+    + func fetchPrinter(context: Context, printerInfo: IPrinterInfo) -> BRPtouchPrinter?
+    + func fetchDeviceInfo(printerInfo: IPrinterInfo) -> BRPtouchDeviceInfo
+}
+object CommonAlertUtil {
+    + {static} func waitingAlert(callBack: @escaping() -> Void) -> UIAlertController
+    + {static} func cancelingAlert() -> UIAlertController
+    + {static} func showSearchingAlert(callBack: @escaping() -> Void) -> UIAlertController
+    + {static} func editAlert(title: String, message: String, callBack: @escaping(String) -> Void) -> UIAlertController
+}
+@enduml

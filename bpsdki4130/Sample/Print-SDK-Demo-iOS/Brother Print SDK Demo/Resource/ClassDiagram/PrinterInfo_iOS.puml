@@ -1,0 +1,43 @@
+@startuml
+package  "Brother_Print_SDK_Demo" {
+    PrinterInfoViewModel --> PrinterInfoFacade
+    PrinterInfoViewModel --> IPrinterInfo
+    PrinterInfoViewController *-- PrinterInfoViewModel
+    PrinterInfoViewController *-- PrinterInfoView
+    PrinterInfoViewController ..> ResultViewController
+    PrinterInfoView ..> PrinterInfoViewModel
+    PrinterInfoView ..> PrinterInfoViewDelegate
+    PrinterInfoViewDelegate <|.. PrinterInfoViewController
+    PrinterInfoSaveDelegate <|.. PrinterInfoViewController
+    ResultViewController *-- ResultViewModel
+    ResultViewController *-- ResultView
+    ResultView ..> ResultViewModel
+    PrinterInfoFacade ..> PrinterConnectUtil
+    PrinterInfoFacade ..> IPrinterInfo
+    PrinterConnectUtil ..> IPrinterInfo
+}
+package "BRLMPrinterKit" {
+    PrinterConnectUtil ..> BRLMChannel
+    PrinterConnectUtil ..> BRPtouchPrinter
+    PrinterConnectUtil ..> BRPtouchDeviceInfo
+}
+interface IPrinterInfo {
+    + channelType: BRLMChannelType
+    + modelName: String
+    + func fetchPrinterModel() -> PrinterModel?
+}
+class PrinterInfoViewModel{
+    + printerInfo: IPrinterInfo?
+    + func fetchFirmVersion(callBack: @escaping(String) -> Void)
+    + func fetchSerial(callBack: @escaping(String) -> Void)
+    + func fetchStatus(callBack: @escaping(String) -> Void)
+    + func fetchSystemReport(callBack: @escaping(String) -> Void)
+    + func fetchMediaVersion(callBack: @escaping(String) -> Void)
+    + func fetchBattery(callBack: @escaping(String) -> Void)
+}
+class PrinterConnectUtil {
+    + func fetchCurrentChannel(context: Context, printerInfo: IPrinterInfo) -> BRLMChannel?
+    + func fetchPrinter(context: Context, printerInfo: IPrinterInfo) -> BRPtouchPrinter?
+    + func fetchDeviceInfo(printerInfo: IPrinterInfo) -> BRPtouchDeviceInfo
+}
+@enduml

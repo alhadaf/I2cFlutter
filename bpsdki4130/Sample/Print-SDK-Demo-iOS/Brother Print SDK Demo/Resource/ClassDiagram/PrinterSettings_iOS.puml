@@ -1,0 +1,89 @@
+@startuml
+package  "Brother_Print_SDK_Demo" {
+    PrintImageViewModel --> IPrinterInfo
+    PrintSettingsViewController ..> ResultViewController
+    PrintSettingsViewController *-- PrintSettingsViewModel
+    PrintSettingsViewController *-- PrintSettingsView
+    PrintSettingsViewController ..> CommonAlertUtil
+    PrintSettingsViewModel ..> PrintImageFacade
+    PrintSettingsViewModel ..> PrintPDFFacade
+    PrintImageFacade ..> PrinterConnectUtil
+    PrintImageFacade ..> IPrinterInfo
+    PrintPDFFacade ..> PrinterConnectUtil
+    PrintPDFFacade ..> IPrinterInfo
+    PrinterConnectUtil ..> IPrinterInfo
+    ResultViewController *-- ResultViewModel
+    ResultViewController *-- ResultView
+    ResultView ..> ResultViewModel
+    PrintSettingsView ..> PrintSettingsViewModel
+    PrintSettingsView ..> PrintSettingsViewDelegate
+    PrintSettingsViewDelegate <|.. PrintSettingsViewController
+    ISimplePrintSettings <|.. MWModelPrintSettings
+    ISimplePrintSettings <|.. PJModelPrintSettings
+    ISimplePrintSettings <|.. RJModelPrintSettings
+    ISimplePrintSettings <|.. QLModelPrintSettings
+    ISimplePrintSettings <|.. PTModelPrintSettings
+    ISimplePrintSettings <|.. TDModelPrintSettings
+    ISimplePrintSettings ..> PrintSettingsItemType
+    PrintSettingsViewModel ..> ISimplePrintSettings
+    PrintSettingsViewModel ..> MWModelPrintSettings
+    PrintSettingsViewModel ..> PJModelPrintSettings
+    PrintSettingsViewModel ..> RJModelPrintSettings
+    PrintSettingsViewModel ..> QLModelPrintSettings
+    PrintSettingsViewModel ..> PTModelPrintSettings
+    PrintSettingsViewModel ..> TDModelPrintSettings
+
+}
+package "BRLMPrinterKit" {
+    PrinterConnectUtil ..> BRLMChannel
+    PrinterConnectUtil ..> BRPtouchPrinter
+    PrinterConnectUtil ..> BRPtouchDeviceInfo
+    ISimplePrintSettings ..> BRLMPrintSettingsProtocal
+    PrintImageFacade ..> BRLMPrintSettingsProtocal
+    PrintPDFFacade ..> BRLMPrintSettingsProtocal
+}
+interface IPrinterInfo {
+    + channelType: BRLMChannelType
+    + modelName: String
+    + func fetchPrinterModel() -> PrinterModel?
+}
+class PrintImageFacade {
+    + func printImageWithImage(info: IPrinterInfo, image: CGImage?, settings: BRLMPrintSettingsProtocal?) -> String
+    + func printImageWithURL(info: IPrinterInfo, url: URL?, settings: BRLMPrintSettingsProtocal?) -> String
+    + func printImageWithURLs(info: IPrinterInfo, urls: [URL]?, settings: BRLMPrintSettingsProtocal?) -> String
+    + func printPRNWithURL(info: IPrinterInfo, url: URL?) -> String
+    + func printPRNWithURLs(info: IPrinterInfo, url: [URL]?) -> String
+    + func printPRNWithData(info: IPrinterInfo, data: Data?) -> String
+    + func cancelPrinting()
+}
+class PrintPDFFacade {
+    + func printPDFWithURL(info: IPrinterInfo, url: URL?, settings: BRLMPrintSettingsProtocal?) -> String
+    + func printPDFWithURLs(info: IPrinterInfo, urls: [URL]?, settings: BRLMPrintSettingsProtocal?) -> String
+    + func printPDFWithPages(info: IPrinterInfo, url: URL?, pages: [Int]?, settings: BRLMPrintSettingsProtocal?) -> String
+    + func cancelPrinting()
+}
+class PrintSettingsViewModel{
+    + printerInfo: IPrinterInfo?
+    + printSettings: ISimplePrintSettings?
+    + func cancel()
+}
+interface ISimplePrintSettings {
+    + printerModel: PrinterModel
+    + settingsData: [SettingItemData]?
+    + func fetchSettingItemList(key: PrintSettingItemType) -> [String]
+    + func setSettingInfo(key: PrintSettingItemType, message: Any)
+    + func fetchPrintSettings() -> BRLMPrintSettingsProtocal?
+    + func validateSettings(callback: @escaping(BRLMValidatePrintSettingsReport) -> Void)
+}
+class PrinterConnectUtil {
+    + func fetchCurrentChannel(context: Context, printerInfo: IPrinterInfo) -> BRLMChannel?
+    + func fetchPrinter(context: Context, printerInfo: IPrinterInfo) -> BRPtouchPrinter?
+    + func fetchDeviceInfo(printerInfo: IPrinterInfo) -> BRPtouchDeviceInfo
+}
+object CommonAlertUtil {
+    + {static} func waitingAlert(callBack: @escaping() -> Void) -> UIAlertController
+    + {static} func cancelingAlert() -> UIAlertController
+    + {static} func showSearchingAlert(callBack: @escaping() -> Void) -> UIAlertController
+    + {static} func editAlert(title: String, message: String, callBack: @escaping(String) -> Void) -> UIAlertController
+}
+@enduml
