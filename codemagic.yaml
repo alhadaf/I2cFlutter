@@ -27,9 +27,16 @@ workflows:
       - name: Install Flutter dependencies
         script: |
           flutter packages pub get
+          echo "Flutter dependencies installed"
+          echo "Checking generated files..."
+          ls -la ios/Flutter/
           
       - name: Install CocoaPods dependencies
         script: |
+          echo "Checking Flutter generated files..."
+          ls -la ios/Flutter/
+          
+          echo "Installing CocoaPods dependencies..."
           cd ios && pod install
           
       - name: Flutter build ipa and automatic versioning
